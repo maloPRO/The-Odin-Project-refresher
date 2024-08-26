@@ -1,12 +1,11 @@
 const choice = ['rock', 'paper', 'scissors'];
 
-
 let getComputerChoice = () => {
     return choice[Math.floor(Math.random() * 3)];
 }
 
 const getHumanChoice = () => {
-    return val = prompt().toLowerCase();
+    return prompt().toLowerCase();
 } 
 
 let humanScore = 0;
@@ -15,11 +14,15 @@ let computerScore = 0;
 
 let playGame = () => {
 
-    let playRound = (humanChoice, computerChoice) => {
-        humanChoice = getHumanChoice();
-        computerChoice = getComputerChoice();
+    let playRound = () => {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
         
-        if (humanChoice === 'rock' && computerChoice === 'rock') {
+        if (!choice.includes(humanChoice)) {
+            alert("Invalid choice. Please enter rock, paper, or scissors.");
+            return; // Exit the function if the choice is invalid
+        }
+        if (humanChoice === computerChoice) {
             alert('Draw')
         } else if (humanChoice === 'rock' && computerChoice === 'paper') {
             alert('You Lose! Paper covers Rock');
@@ -27,16 +30,12 @@ let playGame = () => {
         } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
             alert('You win! Rock crushes Scissors');
             humanScore++;
-        } else if (humanChoice === 'paper' && computerChoice === 'paper') {
-            alert('Draw');
         } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
             alert('You Lose! Scissors cut Paper');
             computerScore++;
         } else if (humanChoice === 'paper' && computerChoice === 'rock') {
             alert('You win! Paper covers Rock');
             humanScore++;
-        } else if (humanChoice === 'scissors' && computerChoice === 'scissors') {
-            alert('Draw');
         } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
             alert('You Lose! Rock crushes Scissors');
             computerScore++;
