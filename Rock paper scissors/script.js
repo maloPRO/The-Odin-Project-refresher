@@ -1,62 +1,52 @@
 const choice = ['rock', 'paper', 'scissors'];
+const buttons = document.querySelectorAll('.btn');
+let humanScore = document.getElementById('hScore');
+let computerScore = document.getElementById('cScore');
+let board = document.querySelector('.board');
+
 
 let getComputerChoice = () => {
     return choice[Math.floor(Math.random() * 3)];
 }
 
-const getHumanChoice = () => {
-    return prompt().toLowerCase();
-} 
-
-let humanScore = 0;
-let computerScore = 0;
-
-
-let playGame = () => {
-
-    let playRound = () => {
-        const humanChoice = getHumanChoice();
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const humanChoice = button.id;
         const computerChoice = getComputerChoice();
-        
-        if (!choice.includes(humanChoice)) {
-            alert("Invalid choice. Please enter rock, paper, or scissors.");
-            return; // Exit the function if the choice is invalid
-        }
+
+
         if (humanChoice === computerChoice) {
-            alert('Draw')
+            board.textContent = 'Draw!!'
         } else if (humanChoice === 'rock' && computerChoice === 'paper') {
-            alert('You Lose! Paper covers Rock');
-            computerScore++;
+            board.textContent = 'You Lose!!'
+            let score = Number(computerScore.textContent);
+            score++
+            computerScore.textContent = score;
         } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-            alert('You win! Rock crushes Scissors');
-            humanScore++;
+            board.textContent = 'You Win!!'
+            let score = Number(humanScore.textContent);
+            score++
+            humanScore.textContent = score;
         } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-            alert('You Lose! Scissors cut Paper');
-            computerScore++;
+            board.textContent = 'You Lose!!'
+            let score = Number(computerScore.textContent);
+            score++
+            computerScore.textContent = score;
         } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-            alert('You win! Paper covers Rock');
-            humanScore++;
+            board.textContent = 'You Win!!'
+            let score = Number(humanScore.textContent);
+            score++
+            humanScore.textContent = score;
         } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-            alert('You Lose! Rock crushes Scissors');
-            computerScore++;
+            board.textContent = 'You Lose!!'
+            let score = Number(computerScore.textContent);
+            score++
+            computerScore.textContent = score;
         } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-            alert('You win! Scissor cut Paper');
-            humanScore++;
+            board.textContent = 'You Win!!'
+            let score = Number(humanScore.textContent);
+            score++
+            humanScore.textContent = score;
         }
-        return humanScore, computerScore;
-    }
-
-    for (let i = 0; i < 2; i++) {
-        playRound();
-    }
-
-    if (computerScore > humanScore) {
-        console.log(`Computer wins! \nComputer:${computerScore} \nYou:${humanScore}`)
-    } else if (computerScore < humanScore) {
-        console.log(`You win! \nYou:${humanScore} \nComp:${computerScore}`)
-    } else {
-        console.log(`It's a TIE`)
-    }
-}
-
-playGame()
+    })
+})
