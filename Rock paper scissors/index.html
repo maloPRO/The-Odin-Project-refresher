@@ -6,16 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body>
-    <div id="container">
-        <button id="rock" class="btn">ROCK</button>
-        <button id="paper" class="btn">PAPER</button>
-        <button id="scissors" class="btn">SCISSORS</button>
-    </div>
-    <div class="scoreboard">
-        <div class="board">READY!!</div>
-        <div>Your Score:<div id="hScore">0</div></div>
-        <div>Computer Score: <div id="cScore">0</div></div>
+<body class="flex">
+    <div class="main w-full h-screen flex flex-col justify-center items-center">
+        <div id="container" class="flex justify-center w-1/2 border-x-orange-400">
+            <button id="rock" class="btn-primary">ROCK</button>
+            <button id="paper" class="btn-primary">PAPER</button>
+            <button id="scissors" class="btn-primary">SCISSORS</button>
+        </div>
+        <div class="scoreboard flex flex-col items-center w-1/2">
+            <div class="board">READY!!</div>
+            <div class="flex">Your Score:<div id="hScore">0</div></div>
+            <div class="flex">Computer Score: <div id="cScore">0</div></div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>
