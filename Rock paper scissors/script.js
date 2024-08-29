@@ -9,47 +9,58 @@ let getComputerChoice = () => {
     return choice[Math.floor(Math.random() * 3)];
 }
 
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        const humanChoice = button.id;
-        const computerChoice = getComputerChoice();
+const playGame = (choice) => {
+    const humanChoice = choice;
+    const computerChoice = getComputerChoice();
 
-        if (rounds < 5) {
-            if (humanChoice === computerChoice) {
-                board.textContent = 'Draw!!'
-            } else if (humanChoice === 'rock' && computerChoice === 'paper') {
-                board.textContent = 'You Lose!!'
-                let score = Number(computerScore.textContent);
-                score++
-                computerScore.textContent = score;
-            } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-                board.textContent = 'You Win!!'
-                let score = Number(humanScore.textContent);
-                score++
-                humanScore.textContent = score;
-            } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-                board.textContent = 'You Lose!!'
-                let score = Number(computerScore.textContent);
-                score++
-                computerScore.textContent = score;
-            } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-                board.textContent = 'You Win!!'
-                let score = Number(humanScore.textContent);
-                score++
-                humanScore.textContent = score;
-            } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-                board.textContent = 'You Lose!!'
-                let score = Number(computerScore.textContent);
-                score++
-                computerScore.textContent = score;
-            } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-                board.textContent = 'You Win!!'
-                let score = Number(humanScore.textContent);
-                score++
-                humanScore.textContent = score;
-            }
-            rounds++;
+    if (rounds < 5) {
+        if (humanChoice === computerChoice) {
+            board.textContent = 'Draw!!'
+        } else if (humanChoice === 'rock' && computerChoice === 'paper') {
+            board.textContent = 'You Lose!!'
+            let score = Number(computerScore.textContent);
+            score++
+            computerScore.textContent = score;
+        } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
+            board.textContent = 'You Win!!'
+            let score = Number(humanScore.textContent);
+            score++
+            humanScore.textContent = score;
+        } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
+            board.textContent = 'You Lose!!'
+            let score = Number(computerScore.textContent);
+            score++
+            computerScore.textContent = score;
+        } else if (humanChoice === 'paper' && computerChoice === 'rock') {
+            board.textContent = 'You Win!!'
+            let score = Number(humanScore.textContent);
+            score++
+            humanScore.textContent = score;
+        } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
+            board.textContent = 'You Lose!!'
+            let score = Number(computerScore.textContent);
+            score++
+            computerScore.textContent = score;
+        } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
+            board.textContent = 'You Win!!'
+            let score = Number(humanScore.textContent);
+            score++
+            humanScore.textContent = score;
         }
+        rounds++;
+    } else {
+        gameOver()
+    }
+}
 
+const gameOver = () => {
+    humanScore.textContent = '0';
+    computerScore.textContent = '0';
+    board.textContent = 'GAME OVER'
+}
+
+buttons.forEach((button) => {
+    button.addEventListener('click', function() {
+        playGame(this.id)
     })
 })
