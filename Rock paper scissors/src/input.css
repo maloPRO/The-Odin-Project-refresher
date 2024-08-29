@@ -6,4 +6,10 @@
     .btn-primary {
         @apply p-1 bg-cyan-300 m-1 rounded;
     }
+    .newBoard {
+        @apply flex flex-col;
+    }
+    .newGame {
+        @apply bg-green-600 rounded p-2;
+    }
 }

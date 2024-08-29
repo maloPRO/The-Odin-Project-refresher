@@ -56,11 +56,26 @@ const playGame = (choice) => {
 const gameOver = () => {
     humanScore.textContent = '0';
     computerScore.textContent = '0';
-    board.textContent = 'GAME OVER'
+    board.textContent = 'GAME OVER';
+    
+    const newGame = document.createElement('button');
+    newGame.classList.add('newGame');
+
+    board.classList.add('newBoard');
+    board.appendChild(newGame);
+    newGame.innerHTML = 'New Game';
+
+    newGame.addEventListener('click', () =>  {
+        window.location.reload();
+    })
 }
 
-buttons.forEach((button) => {
-    button.addEventListener('click', function() {
-        playGame(this.id)
+const gameRound = () => {
+    buttons.forEach((button) => {
+        button.addEventListener('click', function() {
+            playGame(this.id)
+        })
     })
-})
+}
+
+window.onload = gameRound()
