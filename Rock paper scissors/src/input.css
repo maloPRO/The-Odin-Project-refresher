@@ -4,12 +4,15 @@
 
 @layer components {
     .btn-primary {
-        @apply p-1 bg-cyan-300 m-1 rounded;
+        @apply p-1 m-1 rounded-full bg-orange-400 p-8;
     }
     .newBoard {
         @apply flex flex-col;
     }
     .newGame {
         @apply bg-green-600 rounded p-2;
+    }
+    .img {
+        @apply h-14 w-14 rounded;
     }
 }
