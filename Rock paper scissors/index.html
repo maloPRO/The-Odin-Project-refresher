@@ -6,19 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class="flex">
-    <div class="main w-full h-screen flex flex-col justify-center items-center">
-        <div class="scoreboard flex flex-col items-center w-1/2">
-            <div class="board">READY!!</div>
-            <div class="flex">Your Score:<div id="hScore">0</div></div>
-            <div class="flex">Computer Score: <div id="cScore">0</div></div>
+<body class="bg-cyan-900 flex flex-col justify-center items-center h-screen">
+    <div class="main flex flex-col justify-center items-center bg-slate-200 rounded w-1/2 lg:w-1/4 aspect-square">
+        <div class="scoreboard flex flex-col items-center w-full">
+            <div class="flex w-full justify-end pr-2 font-bold">You: <div id="hScore">0</div></div>
+            <div class="flex w-full justify-end pr-2 font-bold">Comp: <div id="cScore">0</div></div>
+            
         </div>
-        <div id="container" class="flex justify-center w-1/2 border-x-orange-400">
+        <div id="container" class="flex justify-center w-1/2 m-6">
             <button id="rock" class=" btn btn-primary"><img class="img" src="./images/fist.png" alt=""></button>
             <button id="paper" class="btn btn-primary"><img class="img" src="./images/hand-paper.png" alt=""></button>
             <button id="scissors" class="btn btn-primary"><img class="img" src="./images/scissors.png" alt=""></button>
         </div>
-
+        <div class="display">
+            <div class="board">READY!!</div>
+        </div>
     </div>
     <script src="./scripts/script.js"></script>
 </body>
