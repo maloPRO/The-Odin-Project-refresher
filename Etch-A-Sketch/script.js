@@ -11,8 +11,8 @@ body.appendChild(btnContainer);
 btnContainer.classList.add('btnContainer');
 
 const enterSides = document.createElement('div');
-enterSides.innerHTML = 'Change number of squares';
-enterSides.classList.add('enterSides')
+enterSides.innerHTML = 'Change number of squares per Side';
+enterSides.classList.add('enterSides');
 btnContainer.appendChild(enterSides);
 
 const inpt = document.createElement('button');
@@ -66,7 +66,12 @@ const hover = () => {
 
 inpt.addEventListener('click', () => {
     const sides = prompt('Enter Number of sides');
-    createSquares(sides);
+    if (sides < 1 || sides > 100) {
+        alert('Number must be between 1 and 100');
+    } else {
+        createSquares(sides);
+    }
+    
 })
 
 window.onload(createSquares(16))
