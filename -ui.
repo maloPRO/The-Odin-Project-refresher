@@ -1,0 +1,59 @@
+[33mcommit 27fcfb4391ba0fbebd884b8666dfb93f623877c7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Wed Aug 28 21:38:41 2024 +0200
+
+    rps-added tailwind files
+
+[33mcommit 75891aaab61aa388b83533e84f0b18108e72688d[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Wed Aug 28 20:59:17 2024 +0200
+
+    rps-added tailwind files
+
+[33mcommit e9f412fabbe544e5018511943625aa2c1fa69b4a[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Tue Aug 27 22:14:08 2024 +0300
+
+    rps - Added UI functionality
+
+[33mcommit fd740bead77ff63d196993926953f3100dfee085[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Mon Aug 26 22:27:31 2024 +0300
+
+    updated  game round functionality
+
+[33mcommit 367fa35d4f1e651172846ff347963ff3aa56e9ba[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Mon Aug 26 22:21:13 2024 +0300
+
+    updated  game round functionality
+
+[33mcommit 92c43f7f318ea52030cbce0f6c0d5fd561432708[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Mon Aug 26 21:36:12 2024 +0300
+
+    updated  game round functionality
+
+[33mcommit 281219e16316b8ec7dc39846c314d4cf4874d240[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Mon Aug 26 20:12:11 2024 +0300
+
+    Added game round functionality
+
+[33mcommit e7b2110b311db54cbc9868202d20897d026cff67[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Mon Aug 26 19:42:37 2024 +0300
+
+    Added computer choice
+
+[33mcommit 2a5aea788f543995b83ca8fb71e69ebaf23b2d8b[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Mon Aug 26 16:05:58 2024 +0300
+
+    init
+
+[33mcommit df602df40fce950598d9cbc631b98d80cc9ba2b7[m
+Author: malopro <malovagilbert@gmail.com>
+Date:   Mon Aug 26 15:52:01 2024 +0300
+
+    Added readme file
