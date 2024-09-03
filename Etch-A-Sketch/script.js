@@ -59,6 +59,11 @@ const hover = () => {
 
 }
 
+inpt.addEventListener('click', () => {
+    const sides = prompt('Enter Number of sides');
+    createSquares(sides);
+})
+
 window.onload(createSquares(16))
 
 
