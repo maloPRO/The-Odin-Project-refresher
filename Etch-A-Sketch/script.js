@@ -10,10 +10,15 @@ const btnContainer = document.createElement('div');
 body.appendChild(btnContainer);
 btnContainer.classList.add('btnContainer');
 
+const enterSides = document.createElement('div');
+enterSides.innerHTML = 'Change number of squares';
+enterSides.classList.add('enterSides')
+btnContainer.appendChild(enterSides);
+
 const inpt = document.createElement('button');
 btnContainer.appendChild(inpt);
 inpt.classList.add('inpt');
-inpt.innerHTML = 'Enter Sides';
+inpt.innerHTML = 'Click ME!';
 
 let container = document.createElement('div');
 container.classList.add('container');

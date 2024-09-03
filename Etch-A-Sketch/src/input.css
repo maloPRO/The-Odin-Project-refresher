@@ -7,7 +7,7 @@
         @apply bg-red-500;
     }
     .container {
-        @apply grid bg-gray-500 w-40e h-40e gap-1;
+        @apply grid bg-gray-500 w-40e h-40e gap-0.5;
     }
     .body {
         @apply grid justify-center content-center w-screen h-screen ;
@@ -20,5 +20,8 @@
     }
     .title {
         @apply flex justify-center font-extrabold text-4xl;
+    }
+    .enterSides {
+        @apply content-center;
     }
 }
