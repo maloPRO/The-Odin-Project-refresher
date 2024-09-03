@@ -6,7 +6,42 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body>
-    
+<body class="w-screen h-screen bg-slate-400">
+    <div class="main bg-blue-900 w-full h-full grid justify-center content-center">
+        <div class="calculator w-72 h-128 grid grid-rows-3 bg-black rounded">
+            <div class="output">0</div>
+            <div class="keypad row-span-2 grid p-2">
+                <div class="row row1">
+                    <button id="clear" class="funcKey">C</button>
+                    <button id="del" class="funcKey">DEL</button>
+                    <button id="percent" class="funcKey">%</button>
+                    <button id="divide" class="opKey">&divide</button>
+                </div>
+                <div class="row row2">
+                    <button id="7" class="numKey">7</button>
+                    <button id="8" class="numKey">8</button>
+                    <button id="9" class="numKey">9</button>
+                    <button id="multiply" class="opKey">&#10005</button>
+                </div>
+                <div class="row row3">
+                    <button id="4" class="numKey">4</button>
+                    <button id="5" class="numKey">5</button>
+                    <button id="6" class="numKey">6</button>
+                    <button id="subtract" class="opKey">-</button>
+                </div>
+                <div class="row row4">
+                    <button id="1" class="numKey">1</button>
+                    <button id="2" class="numKey">2</button>
+                    <button id="3" class="numKey">3</button>
+                    <button id="add" class="opKey">+</button>
+                </div>
+                <div class="row row5">
+                    <button id="0" class="numKey w-28 aspect-auto h-14 rounded-full">0</button>
+                    <button id="point" class="numKey">.</button>
+                    <button id="equal" class="opKey">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

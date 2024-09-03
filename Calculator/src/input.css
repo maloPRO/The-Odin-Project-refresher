@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .row {
+        @apply flex justify-evenly justify-center items-center;
+    }
+    .funcKey {
+        @apply bg-gray-400 rounded-circle aspect-square text-white w-14;
+    }
+    .opKey {
+        @apply bg-yellow-300 rounded-circle aspect-square text-white w-14;
+    }
+    .numKey {
+        @apply bg-gray-700 rounded-circle aspect-square text-white w-14;
+    }
+    .zero {
+        @apply bg-slate-800 rounded-circle aspect-square text-white w-14;
+    }
+    button {
+        @apply font-bold;
+    }
+}
