@@ -4,10 +4,10 @@
 
 @layer components {
     .box {
-        @apply aspect-square flex bg-red-500 shrink;
+        @apply bg-red-500;
     }
     .container {
-        @apply flex basis-auto bg-gray-500 w-40e h-40e gap-1 shrink flex-wrap;
+        @apply grid bg-gray-500 w-40e h-40e gap-1;
     }
     .body {
         @apply grid justify-center content-center w-screen h-screen ;

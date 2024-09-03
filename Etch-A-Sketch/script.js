@@ -33,16 +33,16 @@ const createSquares = (numBoxes) => {
     while(container.firstChild) {
         container.removeChild(container.firstChild);
     }
-
-    const userInput = prompt('Enter Number of squares');
-    numBoxes = parseInt(userInput);
-
+    
     for (let i = 0; i < (numBoxes*numBoxes); i++) {
         let box = document.createElement('div');
         container.appendChild(box);
     
         box.classList.add('box');
     }
+
+    container.style = `grid-template-columns:repeat(${numBoxes}, minmax(0, 1fr));`;
+
 
     hover()
 }
@@ -59,7 +59,6 @@ const hover = () => {
 
 }
 
-
-inpt.addEventListener('click', createSquares)
+window.onload(createSquares(16))
 
 

@@ -589,20 +589,14 @@ video {
 }
 
 .box {
-  display: flex;
-  aspect-ratio: 1 / 1;
-  flex-shrink: 1;
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .container {
-  display: flex;
+  display: grid;
   height: 40em;
   width: 40em;
-  flex-shrink: 1;
-  flex-basis: auto;
-  flex-wrap: wrap;
   gap: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
@@ -2532,12 +2526,9 @@ video {
   }
 
   .sm\:container {
-    display: flex;
+    display: grid;
     height: 40em;
     width: 40em;
-    flex-shrink: 1;
-    flex-basis: auto;
-    flex-wrap: wrap;
     gap: 0.25rem;
     --tw-bg-opacity: 1;
     background-color: rgb(107 114 128 / var(--tw-bg-opacity));
