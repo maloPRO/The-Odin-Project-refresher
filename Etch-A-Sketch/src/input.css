@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .box {
+        @apply aspect-square flex bg-red-500 shrink;
+    }
+    .container {
+        @apply flex basis-auto bg-gray-500 w-40e h-40e gap-1 shrink flex-wrap;
+    }
+    .body {
+        @apply grid justify-center content-center w-screen h-screen ;
+    }
+    .inpt {
+        @apply bg-cyan-800 rounded w-14 p-1 m-2 text-white;
+    }
+    .btnContainer {
+        @apply flex justify-center;
+    }
+    .title {
+        @apply flex justify-center font-extrabold text-4xl;
+    }
+}
