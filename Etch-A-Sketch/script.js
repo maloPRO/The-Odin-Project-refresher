@@ -13,7 +13,7 @@ btnContainer.classList.add('btnContainer');
 const inpt = document.createElement('button');
 btnContainer.appendChild(inpt);
 inpt.classList.add('inpt');
-inpt.innerHTML = 'SIDES';
+inpt.innerHTML = 'Enter Sides';
 
 let container = document.createElement('div');
 container.classList.add('container');

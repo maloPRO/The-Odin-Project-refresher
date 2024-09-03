@@ -620,7 +620,7 @@ video {
 
 .inpt {
   margin: 0.5rem;
-  width: 3.5rem;
+  width: 6rem;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(21 94 117 / var(--tw-bg-opacity));

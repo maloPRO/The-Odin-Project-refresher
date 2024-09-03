@@ -13,7 +13,7 @@
         @apply grid justify-center content-center w-screen h-screen ;
     }
     .inpt {
-        @apply bg-cyan-800 rounded w-14 p-1 m-2 text-white;
+        @apply bg-cyan-800 rounded w-24 p-1 m-2 text-white;
     }
     .btnContainer {
         @apply flex justify-center;
