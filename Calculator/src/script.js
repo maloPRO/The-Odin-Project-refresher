@@ -21,6 +21,9 @@ divide = (a,b) => {
     return a/b;
 }
 
+del.addEventListener('click', () => {
+    input.textContent = input.textContent.slice(0, -1);
+})
 
 numKeys.forEach((numKey) => {
     numKey.addEventListener('click', () => {
