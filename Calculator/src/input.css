@@ -21,4 +21,13 @@
     button {
         @apply font-bold;
     }
+    .display {
+        @apply text-white bg-slate-500 flex flex-col justify-end items-end p-2;
+    }
+    .input {
+        @apply text-2xl;
+    }
+    .output {
+        @apply text-4xl font-bold;
+    }
 }
