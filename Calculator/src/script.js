@@ -50,7 +50,7 @@ equal.addEventListener('click', () => {
         if (op === '+') {
             let num1 = Number(query.slice(0, query.indexOf('+')));
             let num2 = Number(query.slice(query.indexOf('+') + 1));
-            output.textContent = add(num1, num2)
+            output.textContent = add(num1, num2);
         }
     }
 })
