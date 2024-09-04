@@ -8,6 +8,20 @@ const input = document.querySelector('.input');
 const output = document.querySelector('.output');
 const keys = document.querySelectorAll('button');
 
+add = (a,b) => {
+    return a + b;
+}
+subtract = (a,b) => {
+    return a - b;
+}
+multiply = (a,b) => {
+    return a * b;
+}
+divide = (a,b) => {
+    return a/b;
+}
+
+
 numKeys.forEach((numKey) => {
     numKey.addEventListener('click', () => {
         input.textContent += numKey.id;
@@ -22,4 +36,6 @@ opKeys.forEach((opKey) => {
 
 clear.addEventListener('click', () => {
     input.textContent = '';
-})
+});
+
+
