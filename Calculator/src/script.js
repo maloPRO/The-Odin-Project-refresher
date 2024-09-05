@@ -19,7 +19,10 @@ multiply = (a,b) => {
     return a * b;
 }
 divide = (a,b) => {
-    return a/b;
+    if (b === 0) {
+        output.textContent = 'Error';
+    }
+    return a / b;
 }
 
 del.addEventListener('click', () => {
@@ -46,12 +49,15 @@ clear.addEventListener('click', () => {
 equal.addEventListener('click', () => {
     const query = input.textContent;
 
-    const code = '2715';
-    const toUnicode = code => String.fromCodePoint(parseInt(code, 16));
+    const xCode = '2715';
+    const toUnicode = code => String.fromCodePoint(parseInt(xCode, 16));
+    const x = toUnicode(xCode);
 
-    const x = toUnicode(code)
-    
-    console.log(query.includes(x))
+    const divCode = '00F7';
+
+    const divToUnicode = divCode => String.fromCodePoint(parseInt(divCode, 16));
+    const div = divToUnicode(divCode);
+
 
     if (query.includes('+')) {
         let num1 = Number(query.slice(0, query.indexOf('+')));
@@ -65,6 +71,10 @@ equal.addEventListener('click', () => {
         let num1 = Number(query.slice(0, query.indexOf(x)));
         let num2 = Number(query.slice(query.indexOf(x) + 1));
         output.textContent = multiply(num1, num2);
-    }
+    } else if (query.includes(div)) {
+        let num1 = Number(query.slice(0, query.indexOf(div)));
+        let num2 = Number(query.slice(query.indexOf(div) + 1));
+        output.textContent = divide(num1, num2);
+    } 
 
 })
