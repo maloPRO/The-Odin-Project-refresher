@@ -46,11 +46,14 @@ clear.addEventListener('click', () => {
 equal.addEventListener('click', () => {
     const query = input.textContent;
 
-    for(let op of ops) {
-        if (op === '+') {
-            let num1 = Number(query.slice(0, query.indexOf('+')));
-            let num2 = Number(query.slice(query.indexOf('+') + 1));
-            output.textContent = add(num1, num2);
-        }
+    if (query.includes('+')) {
+        let num1 = Number(query.slice(0, query.indexOf('+')));
+        let num2 = Number(query.slice(query.indexOf('+') + 1));
+        output.textContent = add(num1, num2);
+    } else if (query.includes('-')) {
+        let num1 = Number(query.slice(0, query.indexOf('-')));
+        let num2 = Number(query.slice(query.indexOf('-') + 1));
+        output.textContent = subtract(num1, num2);
     }
+
 })
