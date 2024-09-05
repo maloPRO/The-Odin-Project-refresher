@@ -682,8 +682,12 @@ button {
   justify-content: center;
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .rounded-circle {
@@ -692,6 +696,10 @@ button {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .bg-black {

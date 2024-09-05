@@ -7,7 +7,6 @@ const clear = document.querySelector('#clear');
 const input = document.querySelector('.input');
 const output = document.querySelector('.output');
 const keys = document.querySelectorAll('button');
-const ops = ['+', '-', '/', '*']
 
 add = (a,b) => {
     return (a + b);
@@ -16,14 +15,15 @@ subtract = (a,b) => {
     return (a - b);
 }
 multiply = (a,b) => {
-    return a * b;
+    return (a * b);
 }
 divide = (a,b) => {
     if (b === 0) {
         output.textContent = 'Error';
     }
-    return a / b;
+    return round(a / b);
 }
+
 
 del.addEventListener('click', () => {
     input.textContent = input.textContent.slice(0, -1);
@@ -45,6 +45,17 @@ clear.addEventListener('click', () => {
     input.textContent = '';
     output.textContent = '0';
 });
+
+const round = (num) => {
+    const numStr = num.toString();
+    const decInd = numStr.indexOf('.');
+
+    if (decInd === -1 || numStr.length - decInd - 1 <= 5) {
+        return num;
+    }
+
+    return parseFloat(num.toFixed(10));
+}
 
 equal.addEventListener('click', () => {
     const query = input.textContent;
