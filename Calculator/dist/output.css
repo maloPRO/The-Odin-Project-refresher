@@ -564,7 +564,7 @@ video {
 .funcKey {
   aspect-ratio: 1 / 1;
   width: 3.5rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -574,7 +574,7 @@ video {
 .opKey {
   aspect-ratio: 1 / 1;
   width: 3.5rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -584,7 +584,7 @@ video {
 .numKey {
   aspect-ratio: 1 / 1;
   width: 3.5rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -608,11 +608,6 @@ button {
 }
 
 .input {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.\!input {
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -687,20 +682,16 @@ button {
   justify-content: center;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .rounded-circle {
   border-radius: 50%;
 }
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .border-4 {
@@ -729,6 +720,10 @@ button {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .text-white {
