@@ -15,7 +15,7 @@ subtract = (a,b) => {
     return (a - b);
 }
 multiply = (a,b) => {
-    return (a * b);
+    return round(a * b);
 }
 divide = (a,b) => {
     if (b === 0) {
@@ -31,7 +31,9 @@ del.addEventListener('click', () => {
 
 numKeys.forEach((numKey) => {
     numKey.addEventListener('click', () => {
-        input.textContent += numKey.id;
+        if (input.textContent.length < 15) {
+            input.textContent += numKey.id;
+        }
     })
 })
 
