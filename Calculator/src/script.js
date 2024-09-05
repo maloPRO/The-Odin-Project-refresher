@@ -46,6 +46,13 @@ clear.addEventListener('click', () => {
 equal.addEventListener('click', () => {
     const query = input.textContent;
 
+    const code = '2715';
+    const toUnicode = code => String.fromCodePoint(parseInt(code, 16));
+
+    const x = toUnicode(code)
+    
+    console.log(query.includes(x))
+
     if (query.includes('+')) {
         let num1 = Number(query.slice(0, query.indexOf('+')));
         let num2 = Number(query.slice(query.indexOf('+') + 1));
@@ -54,6 +61,10 @@ equal.addEventListener('click', () => {
         let num1 = Number(query.slice(0, query.indexOf('-')));
         let num2 = Number(query.slice(query.indexOf('-') + 1));
         output.textContent = subtract(num1, num2);
+    } else if (query.includes(x)) {
+        let num1 = Number(query.slice(0, query.indexOf(x)));
+        let num2 = Number(query.slice(query.indexOf(x) + 1));
+        output.textContent = multiply(num1, num2);
     }
 
 })
