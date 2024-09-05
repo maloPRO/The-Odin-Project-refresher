@@ -682,14 +682,6 @@ button {
   justify-content: center;
 }
 
-.rounded-circle {
-  border-radius: 50%;
-}
-
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -703,11 +695,6 @@ button {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-blue-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
-}
-
 .bg-slate-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
@@ -718,15 +705,35 @@ button {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
-.pr-2 {
-  padding-right: 0.5rem;
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2;
+}
+
+.bg-\[url\(\'\.\.\/images\/math-bg\.jpg\'\)\] {
+  background-image: url('../images/math-bg.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.bg-blend-darken {
+  background-blend-mode: darken;
 }
