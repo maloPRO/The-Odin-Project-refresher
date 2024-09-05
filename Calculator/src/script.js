@@ -35,9 +35,25 @@ numKeys.forEach((numKey) => {
     })
 })
 
+const xCode = '2715';
+const toUnicode = code => String.fromCodePoint(parseInt(xCode, 16));
+
+const divCode = '00F7';
+const divToUnicode = divCode => String.fromCodePoint(parseInt(divCode, 16));
+
+const x = toUnicode(xCode);
+const div = divToUnicode(divCode);
+
+const ops = ['+', '-', x, div];
+
 opKeys.forEach((opKey) => {
     opKey.addEventListener('click', () => {
-        input.textContent += opKey.innerHTML;
+        const keyVal = opKey.textContent;
+        const containsOp = ops.some(op => input.textContent.includes(op));
+
+        if (!containsOp) {
+            input.textContent += keyVal;
+        }   
     })
 })
 
