@@ -62,7 +62,6 @@ const addBooksToShelf = () => {
     })
 
     library.appendChild(addBook);
-
 }
 
 form.addEventListener('submit', (e) => {
@@ -72,7 +71,6 @@ form.addEventListener('submit', (e) => {
     addBooksToShelf()
     form.reset()
     dialog.close()
-
 })
 
 const savedBooks = () => {
@@ -80,6 +78,5 @@ const savedBooks = () => {
     myBooks = savedItems;
     addBooksToShelf()
 }
-
 
 window.addEventListener('load', savedBooks)
