@@ -9,5 +9,13 @@
     .cover {
         @apply bg-white rounded p-2;
     }
-
+    .btnContainer {
+        @apply grid justify-center items-center;
+    }
+    .addBook {
+        @apply text-white text-4xl border-4 border-white rounded-full w-12 h-12;
+    }
+    form {
+        @apply flex flex-col w-1/2 h-1/2 bg-red-500 absolute top-1/4 left-1/4 z-50 invisible;
+    }
 }

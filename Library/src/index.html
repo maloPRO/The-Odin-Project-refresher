@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="../dist/output.css">
 </head>
 <body>
-    <div class="main bg-blue-900 w-screen min-h-screen p-4">
+    <div class="main bg-blue-900 w-screen min-h-screen p-4 z-0 relative">
         <div class="title text-white text-4xl font-mono">BookMania</div>
         <div class="library"></div>
+        <form action="">
+            <label for="bookTitle">Title: <input type="text" name="bookTitle"></label>
+            <label for="bookAutho">Author: <input type="text" name="bookAuhtor"></label>
+            <button type="submit"> submit</button>
+        </form>
     </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
