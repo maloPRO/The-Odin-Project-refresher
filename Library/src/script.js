@@ -21,9 +21,10 @@ const createBook = (title, author) => {
     myLibrary.push(newBook)
 };
 
+
 const addBooksToShelf = () => {
-    
-    while (lib.children.length > 1) {
+
+    while (lib.children.length > 0) {
         lib.removeChild(lib.lastChild);
     }
 
@@ -40,9 +41,22 @@ const addBooksToShelf = () => {
         const author = document.createElement('div');
         author.classList.add('author');
         author.textContent = `Author: ${libBook.author}`;
-        cover.appendChild(author);    
+        cover.appendChild(author);  
+        
+        const del = document.createElement('button');
+        del.textContent = 'Delete';
+        del.classList.add('delBtn')
+        cover.appendChild(del);
+
+        del.addEventListener('click', () => {
+            const delItem = del.parentNode;
+            lib.removeChild(delItem)
+        })
 
     })
+
+    lib.appendChild(addBook);
+
 }
 
 
@@ -52,6 +66,7 @@ form.addEventListener('submit', (e) => {
     createBook(newTitle.value, newauthor.value);
 
     addBooksToShelf()
+    form.reset()
     dialog.close()
 
 })
