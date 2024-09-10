@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer components {
+    .main {
+        @apply bg-blue-900 w-screen min-h-screen p-4 z-0 relative;
+    }
+    .title {
+        @apply text-white text-4xl font-mono;
+    }
     .library {
         @apply grid sm:grid-cols-3 lg:grid-cols-5 gap-6 py-4 items-center;
     }

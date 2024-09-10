@@ -554,6 +554,24 @@ video {
   --tw-contain-style:  ;
 }
 
+.main {
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  width: 100vw;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+  padding: 1rem;
+}
+
+.title {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .library {
   display: grid;
   align-items: center;
@@ -641,43 +659,4 @@ input {
     height: 50%;
     width: 25%;
   }
-}
-
-.relative {
-  position: relative;
-}
-
-.z-0 {
-  z-index: 0;
-}
-
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-.bg-blue-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
