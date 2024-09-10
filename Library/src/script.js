@@ -3,10 +3,12 @@ const main = document.querySelector('.main');
 const lib = document.querySelector('.library');
 const form = document.querySelector('form');
 const addBook = document.querySelector('.addBook');
+const dialog = document.querySelector('dialog');
+const newTitle = document.querySelector('#bookTitle');
+const newauthor = document.querySelector('#bookAuthor');
 
 addBook.addEventListener('click',  () => {
-    form.classList.remove('invisible');
-    form.classList.add('visible')
+    dialog.showModal();
 })
 
 function Book(title, author) {
@@ -14,7 +16,17 @@ function Book(title, author) {
     this.author = author;
 }
 
+const createBook = (title, author) => {
+    const newBook = new Book(title, author);
+    myLibrary.push(newBook)
+};
+
 const addBooksToShelf = () => {
+    
+    while (lib.children.length > 1) {
+        lib.removeChild(lib.lastChild);
+    }
+
     myLibrary.forEach((libBook) => {
         const cover = document.createElement('div');
         cover.classList.add('cover');
@@ -36,18 +48,10 @@ const addBooksToShelf = () => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    form.classList.remove('visible');
-    form.classList.add('invisible');
 
-    let title = document.getElementById('bookTitle');
-    let author = document.getElementById('bookAuthor');
-
-    const addedBook = new Book(title.value, author.value);
-
-    myLibrary.push(addedBook);
+    createBook(newTitle.value, newauthor.value);
 
     addBooksToShelf()
-
-    console.log(myLibrary.length)
+    dialog.close()
 
 })
