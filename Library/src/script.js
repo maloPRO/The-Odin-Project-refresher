@@ -1,20 +1,17 @@
-const myLibrary = [{title: 'Harry Potter', author: 'JK Rowlings'}, {title: 'Harry Potter 2', author: 'JK Rowlings'}, {title: 'Harry Potter 3', author: 'JK Rowlings'}, ];
+const myLibrary = [];
 const main = document.querySelector('.main');
 const lib = document.querySelector('.library');
 const form = document.querySelector('form');
+const addBook = document.querySelector('.addBook');
+
+addBook.addEventListener('click',  () => {
+    form.classList.remove('invisible');
+    form.classList.add('visible')
+})
 
 function Book(title, author) {
     this.title = title;
     this.author = author;
-}
-
-function addBookToLibrary() {
-    const  title = prompt('Enter Book Title');
-    const author = prompt('Enter book Author');
-
-    const newBook = new Book(title, author);
-    myLibrary.push(newBook);
-    
 }
 
 const addBooksToShelf = () => {
@@ -33,32 +30,24 @@ const addBooksToShelf = () => {
         author.textContent = `Author: ${libBook.author}`;
         cover.appendChild(author);    
 
-
     })
 }
 
-const addBookButton = () => {
 
-    const btnContainer = document.createElement('div');
-    btnContainer.classList.add('btnContainer');
-    lib.appendChild(btnContainer);
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.classList.remove('visible');
+    form.classList.add('invisible');
 
+    let title = document.getElementById('bookTitle');
+    let author = document.getElementById('bookAuthor');
 
-    const btn = document.createElement('button');
-    btn.textContent = '+';
-    btn.classList.add('addBook');
+    const addedBook = new Book(title.value, author.value);
 
-    btnContainer.appendChild(btn);
+    myLibrary.push(addedBook);
 
-    btn.addEventListener('click', formViewer)
+    addBooksToShelf()
 
-}
+    console.log(myLibrary.length)
 
-const formViewer = () => {
-    form.classList.remove('invisible');
-    form.classList.add('visible')
-    console.log(888)
-}
-
-addBooksToShelf()
-addBookButton()
+})

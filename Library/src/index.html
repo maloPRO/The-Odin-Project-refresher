@@ -9,12 +9,12 @@
 <body>
     <div class="main bg-blue-900 w-screen min-h-screen p-4 z-0 relative">
         <div class="title text-white text-4xl font-mono">BookMania</div>
-        <div class="library"></div>
+        <div class="library">
+            <button class="addBook">+</button>
+        </div>
         <form action="">
-            <label for="bookTitle">Title: </label>
-            <input id="bookTitle" type="text" name="bookTitle">
-            <label for="bookAutho">Author: </label>
-            <input id="bookAuthor" type="text" name="bookAuhtor">
+            <label for="bookTitle">Title: <input id="bookTitle" type="text" name="bookTitle"></label>  
+            <label for="bookAuthor">Author: <input id="bookAuthor" type="text" name="bookAuhtor"></label>
             <button type="submit"> submit</button>
         </form>
     </div>
