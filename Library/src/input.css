@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-    body {
-        @apply bg-slate-600
+    .library {
+        @apply grid sm:grid-cols-3 lg:grid-cols-5 gap-6 py-4;
     }
+    .cover {
+        @apply bg-white rounded p-2;
+    }
+
 }
