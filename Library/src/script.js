@@ -19,7 +19,6 @@ function Book(title, author) {
 const createBook = (title, author) => {
     const newBook = new Book(title, author);
     myBooks.push(newBook);
-    
     localStorage.setItem('savedBooks', JSON.stringify(myBooks))
 };
 
@@ -73,10 +72,4 @@ form.addEventListener('submit', (e) => {
     dialog.close()
 })
 
-const savedBooks = () => {
-    let savedItems = JSON.parse(localStorage.getItem('savedBooks'));
-    myBooks = savedItems;
-    addBooksToShelf()
-}
-
-window.addEventListener('load', savedBooks)
+window.addEventListener('load', addBooksToShelf)

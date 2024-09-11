@@ -4,16 +4,19 @@
 
 @layer components {
     .main {
-        @apply bg-blue-900 w-screen min-h-screen p-4 z-0 relative;
+        @apply bg-blue-800 w-screen min-h-screen p-4 z-0 relative;
     }
-    .title {
+    .siteTitle {
         @apply text-white text-4xl font-mono;
     }
     .library {
         @apply grid sm:grid-cols-3 lg:grid-cols-5 gap-6 py-4 items-center;
     }
     .cover {
-        @apply bg-blue-950 text-slate-50 rounded p-2 flex flex-col gap-2;
+        @apply bg-blue-950 shadow-2xl text-slate-50 rounded py-8 px-4 flex flex-col gap-2 h-60;
+    }
+    .title, .author {
+        @apply font-semibold;
     }
     .btnContainer {
         @apply grid justify-center items-center;
@@ -21,8 +24,11 @@
     .addBook {
         @apply text-white text-4xl border-4 border-white rounded-full w-12 h-12 float-end;
     }
+    .delBtn {
+        @apply bg-white shadow-2xl text-blue-950 font-bold w-1/4 rounded p-1 hover:bg-blue-800 hover:text-white hover:border-2 ;
+    }
     form {
-        @apply flex flex-col bg-blue-500 w-full h-full p-4 gap-2 items-center;
+        @apply flex flex-col bg-blue-500 w-full h-full p-6 gap-3 items-center;
     }
     input {
         @apply p-2 rounded;
@@ -31,6 +37,6 @@
         @apply text-white border-2 md:w-1/4 sm:w-1/2 p-1 font-bold rounded-md ;
     }
     dialog {
-        @apply md:w-1/4 md:h-1/2;
+        @apply md:w-1/2 md:h-1/2 lg:w-1/4;
     }
 }
