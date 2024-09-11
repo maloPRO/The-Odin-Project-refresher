@@ -58,7 +58,7 @@ const addBooksToShelf = () => {
         cover.appendChild(btnCont);
 
         const toggle = document.createElement('div');
-        toggle.innerHTML = `<label class="switch">Read
+        toggle.innerHTML = `<label class="switch">
                                 <input type="checkbox" checked>
                                 <span class="slider"></span>
                             </label>`
