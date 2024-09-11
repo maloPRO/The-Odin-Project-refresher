@@ -6,18 +6,22 @@ const addBook = document.querySelector('.addBook');
 const dialog = document.querySelector('dialog');
 const titleInput = document.querySelector('#titleInput');
 const authorInput = document.querySelector('#authorInput');
+const pageInput = document.querySelector('#pageInput');
+const statusInput = document.querySelector('#statusInput');
 
 addBook.addEventListener('click',  () => {
     dialog.showModal();
 })
 
-function Book(title, author) {
+function Book(title, author, pages, status) {
     this.title = title;
     this.author = author;
+    this.pages = pages;
+    this.status = status;
 }
 
-const createBook = (title, author) => {
-    const newBook = new Book(title, author);
+const createBook = (title, author, pages, status) => {
+    const newBook = new Book(title, author, pages, status);
     myBooks.push(newBook);
     localStorage.setItem('savedBooks', JSON.stringify(myBooks))
 };
@@ -42,15 +46,33 @@ const addBooksToShelf = () => {
         const author = document.createElement('div');
         author.classList.add(`author`);
         author.textContent = `Author: ${book.author}`;
-        cover.appendChild(author);  
-        
+        cover.appendChild(author); 
+
+        const pages = document.createElement('div');
+        pages.classList.add(`pages`);
+        pages.textContent = `Pages: ${book.pages}`;
+        cover.appendChild(pages);  
+
+        const btnCont = document.createElement('div');
+        btnCont.classList.add('btnContainer');
+        cover.appendChild(btnCont);
+
+        const toggle = document.createElement('div');
+        toggle.innerHTML = `<label class="switch">Read
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>`
+
+        btnCont.appendChild(toggle);
+
         const del = document.createElement('button');
         del.textContent = 'Delete';
         del.classList.add('delBtn')
-        cover.appendChild(del);
+        btnCont.appendChild(del);
 
         del.addEventListener('click', () => {
-            del.parentElement.remove();
+            const parent = del.parentElement
+            parent.parentElement.remove();
 
             myBooks.forEach((book, idx) => {
                 myBooks.splice(idx, 1);
@@ -66,7 +88,7 @@ const addBooksToShelf = () => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    createBook(titleInput.value, authorInput.value);
+    createBook(titleInput.value, authorInput.value, pageInput.value, statusInput.value);
     addBooksToShelf()
     form.reset()
     dialog.close()

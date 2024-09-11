@@ -555,16 +555,15 @@ video {
 }
 
 .main {
-  position: relative;
-  z-index: 0;
   min-height: 100vh;
   width: 100vw;
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-  padding: 1rem;
 }
 
 .siteTitle {
+  border-bottom-width: 2px;
+  padding: 1rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -576,8 +575,7 @@ video {
   display: grid;
   align-items: center;
   gap: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 @media (min-width: 640px) {
@@ -615,6 +613,14 @@ video {
   font-weight: 600;
 }
 
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .addBook {
   float: inline-end;
   height: 3rem;
@@ -630,7 +636,6 @@ video {
 }
 
 .delBtn {
-  width: 25%;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
