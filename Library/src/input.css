@@ -4,19 +4,19 @@
 
 @layer components {
     .main {
-        @apply bg-blue-950 w-screen min-h-screen;
+        @apply bg-slate-950 w-screen min-h-screen font-poppins;
     }
     .siteTitle {
-        @apply text-white text-4xl font-mono border-b-2 p-4;
+        @apply text-white text-4xl border-b-4 p-4;
     }
     .library {
         @apply grid sm:grid-cols-3 lg:grid-cols-5 gap-6 p-4 items-center ;
     }
     .cover {
-        @apply bg-blue-400 shadow-2xl text-slate-50 rounded flex flex-col h-52;
+        @apply bg-white/10 backdrop-blur-md shadow-slate-500 shadow-md text-slate-50 rounded-lg flex flex-col p-4 h-52;
     }
     .title, .author, .pages {
-        @apply bg-blue-400 w-full p-2;
+        @apply w-full p-1;
     }
     .btnContainer {
         @apply flex flex-col justify-center items-center gap-2;

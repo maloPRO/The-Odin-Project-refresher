@@ -52,9 +52,7 @@ const addBooksToShelf = () => {
 
         const del = document.querySelector('.delBtn');
         del.addEventListener('click', () => {
-            const parent = del.parentElement
-            parent.parentElement.remove();
-
+            del.parentElement.parentElement.remove();
             myBooks.forEach((book, idx) => {
                 myBooks.splice(idx, 1);
                 localStorage.setItem('savedBooks', JSON.stringify(myBooks))
@@ -70,9 +68,9 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     createBook(titleInput.value, authorInput.value, pageInput.value, statusInput.value);
-    addBooksToShelf()
-    form.reset()
-    dialog.close()
+    addBooksToShelf();
+    form.reset();
+    dialog.close();
 })
 
-window.addEventListener('load', addBooksToShelf)
+window.addEventListener('load', addBooksToShelf);
