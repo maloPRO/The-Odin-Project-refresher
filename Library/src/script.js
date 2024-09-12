@@ -38,38 +38,19 @@ const addBooksToShelf = () => {
         cover.id = `${index + 1}`
         library.appendChild(cover);
 
-        const title = document.createElement('div');
-        title.classList.add('title');
-        title.textContent = `Title: ${book.title}`;
-        cover.appendChild(title);
+        cover.innerHTML = `
+                            <div class='title'><b>Title:</b> ${book.title}</div>
+                            <div class='author'><b>Author:</b> ${book.author}</div>
+                            <div class='pages'><b>Pages:</b> ${book.pages}</div>
+                            <div class='btnContainer'>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <button class='delBtn'>Delete</button>
+                            </div>`
 
-        const author = document.createElement('div');
-        author.classList.add(`author`);
-        author.textContent = `Author: ${book.author}`;
-        cover.appendChild(author); 
-
-        const pages = document.createElement('div');
-        pages.classList.add(`pages`);
-        pages.textContent = `Pages: ${book.pages}`;
-        cover.appendChild(pages);  
-
-        const btnCont = document.createElement('div');
-        btnCont.classList.add('btnContainer');
-        cover.appendChild(btnCont);
-
-        const toggle = document.createElement('div');
-        toggle.innerHTML = `<label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider"></span>
-                            </label>`
-
-        btnCont.appendChild(toggle);
-
-        const del = document.createElement('button');
-        del.textContent = 'Delete';
-        del.classList.add('delBtn')
-        btnCont.appendChild(del);
-
+        const del = document.querySelector('.delBtn');
         del.addEventListener('click', () => {
             const parent = del.parentElement
             parent.parentElement.remove();
