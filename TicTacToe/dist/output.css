@@ -620,6 +620,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.box:hover {
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
 }
@@ -638,4 +642,9 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
