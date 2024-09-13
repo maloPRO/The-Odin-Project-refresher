@@ -17,6 +17,7 @@ const game = (function () {
     const playRound = (e) => {
         
         const grid = e.target;
+
         if (grid.classList.contains('unclicked')) {
 
             grid.classList.remove('unclicked');
@@ -26,29 +27,19 @@ const game = (function () {
             gameBoard[grid.id] = grid.textContent;
 
             // Check rows
-            if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') alert('Player One wins');
-            if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') alert('Player One wins');
-            if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') alert('Player One wins');
-
-            if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') alert('Player Two wins');
-            if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') alert('Player Two wins');
-            if (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O') alert('Player Two wins');
+            if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') return gameBoard[0];
+            if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') return gameBoard[3];
+            if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') return gameBoard[6];
 
             // Check columns
-            if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') alert('Player One wins');
-            if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') alert('Player One wins');
-            if (gameBoard[2] === 'X' && gameBoard[8] === 'X' && gameBoard[8] === 'X') alert('Player One wins');
-
-            if (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') alert('Player Two wins');
-            if (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') alert('Player Two wins');
-            if (gameBoard[2] === 'O' && gameBoard[8] === 'O' && gameBoard[8] === 'O') alert('Player Two wins');
+            if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') return gameBoard[0];
+            if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') return gameBoard[1];
+            if (gameBoard[2] === 'X' && gameBoard[8] === 'X' && gameBoard[8] === 'X') return gameBoard[2];
 
             // Check diagonals
-            if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') alert('Player One wins');
-            if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') alert('Player One wins');
+            if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') return gameBoard[0];
+            if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') return gameBoard[2];
 
-            if (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') alert('Player Two wins');
-            if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') alert('Player Two wins');
         }
     }
 
