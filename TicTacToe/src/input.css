@@ -7,6 +7,6 @@
         @apply grid grid-cols-3 gap-2 lg:w-1/4 md:w-1/2 aspect-square;
     }
     .box {
-        @apply bg-red-400 flex items-center justify-center text-6xl text-white font-extrabold hover:cursor-pointer;
+        @apply bg-red-400 w-full h-full text-6xl flex items-center justify-center overflow-hidden text-white font-extrabold hover:cursor-pointer;
     }
 }
