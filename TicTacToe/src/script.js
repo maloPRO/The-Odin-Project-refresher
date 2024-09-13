@@ -17,14 +17,18 @@ const game = (function () {
     const playRound = (e) => {
         
         const grid = e.target;
-        grid.classList.add('clicked')
-
-        if (currentPlayer === 1 ) {
-            grid.textContent = player1.symbol;
-        } else {
-            grid.textContent = player2.symbol;
+        if (grid.classList.contains('unclicked')) {
+            
+            grid.classList.remove('unclicked')
+            if (currentPlayer === 1 ) {
+                grid.textContent = player1.symbol;
+            } else {
+                grid.textContent = player2.symbol;
+            }
+            currentPlayer = currentPlayer === 1 ? 2 : 1;
         }
-        currentPlayer = currentPlayer === 1 ? 2 : 1;
+
+
 
         
     }
