@@ -14,9 +14,15 @@ const game = (function () {
     let currentPlayer = 1;
     let plays = 0;
 
-    const handleClick = (e) => {
+    const playRound = (e) => {
         plays++;
         const grid = e.target;
+
+        if (currentPlayer === 1) {
+            grid.textContent = player1.symbol;
+        } else {
+            grid.textContent = player2.symbol;
+        }
 
         if (plays < 10) {
             currentPlayer = currentPlayer === 1 ? 2 : 1;
@@ -25,7 +31,7 @@ const game = (function () {
     }
 
     grids.forEach((grid) => {
-        grid.addEventListener('click', handleClick)
+        grid.addEventListener('click', playRound)
     })
     return {board, createPlayer}
 
