@@ -27,18 +27,18 @@ const game = (function () {
             gameBoard[grid.id] = grid.textContent;
 
             // Check rows
-            if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') return gameBoard[0];
-            if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') return gameBoard[3];
-            if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') return gameBoard[6];
+            if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) return gameBoard[0];
+            if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5]) return gameBoard[3];
+            if (gameBoard[6] !== '' && gameBoard[6] === gameBoard[7] && gameBoard[7] === gameBoard[8]) return gameBoard[0];
 
             // Check columns
-            if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') return gameBoard[0];
-            if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') return gameBoard[1];
-            if (gameBoard[2] === 'X' && gameBoard[8] === 'X' && gameBoard[8] === 'X') return gameBoard[2];
+            if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[3] && gameBoard[3] === gameBoard[6]) return gameBoard[0];
+            if (gameBoard[1] !== '' && gameBoard[4] === gameBoard[4] && gameBoard[4] === gameBoard[7]) return gameBoard[1];
+            if (gameBoard[2] !== '' && gameBoard[5] === gameBoard[5] && gameBoard[7] === gameBoard[8]) return gameBoard[2];
 
             // Check diagonals
-            if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') return gameBoard[0];
-            if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') return gameBoard[2];
+            if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[4] && gameBoard[4] === gameBoard[8]) return gameBoard[0];
+            if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6]) return gameBoard[3];
 
         }
     }
@@ -46,8 +46,9 @@ const game = (function () {
     grids.forEach((grid) => {
         grid.addEventListener('click', playRound);
     });
-    
-    return {createPlayer}
+
+
+    return {createPlayer, playRound}
 
 })();
 
