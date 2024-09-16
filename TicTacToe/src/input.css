@@ -7,6 +7,15 @@
         @apply grid grid-cols-3 gap-2 lg:w-1/4 md:w-1/2 aspect-square;
     }
     .box {
-        @apply bg-red-400 w-full h-full text-6xl flex items-center justify-center overflow-hidden text-white font-extrabold hover:cursor-pointer;
+        @apply bg-amber-500 w-full h-full text-6xl flex items-center justify-center overflow-hidden text-white font-extrabold hover:cursor-pointer;
+    }
+    .controls {
+        @apply bg-sky-800 p-6 lg:w-1/4 md:w-1/2 flex flex-col gap-2 items-center justify-center ;
+    }
+    .newGame {
+        @apply bg-amber-700 p-2 rounded text-white font-bold;
+    }
+    .results {
+         @apply text-xl font-bold text-white; 
     }
 }

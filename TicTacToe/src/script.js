@@ -3,7 +3,9 @@ const game = (function () {
             'a1', 'a2', 'a3',
             'b1', 'b2','b3',
             'c1', 'c2', 'c3'
-        ]
+        ];
+    const newGame = document.querySelector('.newGame');
+    const results = document.querySelector('.results');
 
     const createPlayer = (name, symbol) => {
         return {name, symbol}
@@ -31,12 +33,12 @@ const game = (function () {
             // Check for win conditions
             const winner = checkWinner(gameBoard, currentSymbol);
             if (winner) {
-                alert(`${winner} wins!`);
+                results.textContent = `${winner} wins!`;
                 return winner;
             }
             
             if (!document.querySelector('.unclicked')) {
-                alert('It\'s a draw!');
+                results.textContent = 'It\'s a draw!';
                 return 'draw';
             }
         }
@@ -61,10 +63,22 @@ const game = (function () {
         return null;
     }
     
+    newGame.addEventListener('click', () => {
+        grids.forEach((grid) => {
+            grid.textContent = '.';
+            grid.classList.add('unclicked');
+
+        })
+        results.textContent = 'Game ON!'
+        playRound()
+        
+    })
 
     grids.forEach((grid) => {
         grid.addEventListener('click', playRound);
     });
+
+
 
     return {createPlayer, playRound}
 
