@@ -15,38 +15,56 @@ const game = (function () {
     let currentPlayer = 1;
 
     const playRound = (e) => {
-        
         const grid = e.target;
-
+    
         if (grid.classList.contains('unclicked')) {
-
             grid.classList.remove('unclicked');
-            grid.textContent = (currentPlayer === 1) ? player1.symbol : player2.symbol;
-
+    
+            // Set symbol for current player and update the game board
+            const currentSymbol = (currentPlayer === 1) ? player1.symbol : player2.symbol;
+            grid.textContent = currentSymbol;
+            gameBoard[grid.id] = currentSymbol;
+    
+            // Switch players
             currentPlayer = currentPlayer === 1 ? 2 : 1;
-            gameBoard[grid.id] = grid.textContent;
-
-            // Check rows
-            if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) return gameBoard[0];
-            if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5]) return gameBoard[3];
-            if (gameBoard[6] !== '' && gameBoard[6] === gameBoard[7] && gameBoard[7] === gameBoard[8]) return gameBoard[0];
-
-            // Check columns
-            if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[3] && gameBoard[3] === gameBoard[6]) return gameBoard[0];
-            if (gameBoard[1] !== '' && gameBoard[4] === gameBoard[4] && gameBoard[4] === gameBoard[7]) return gameBoard[1];
-            if (gameBoard[2] !== '' && gameBoard[5] === gameBoard[5] && gameBoard[7] === gameBoard[8]) return gameBoard[2];
-
-            // Check diagonals
-            if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[4] && gameBoard[4] === gameBoard[8]) return gameBoard[0];
-            if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6]) return gameBoard[3];
-
+    
+            // Check for win conditions
+            const winner = checkWinner(gameBoard, currentSymbol);
+            if (winner) {
+                alert(`${winner} wins!`);
+                return winner;
+            }
+            
+            if (!document.querySelector('.unclicked')) {
+                alert('It\'s a draw!');
+                return 'draw';
+            }
         }
     }
+    
+    // Function to check if the current player has won
+    const checkWinner = (gameBoard, symbol) => {
+        // Check rows
+        if (gameBoard[0] === symbol && gameBoard[1] === symbol && gameBoard[2] === symbol) return symbol;
+        if (gameBoard[3] === symbol && gameBoard[4] === symbol && gameBoard[5] === symbol) return symbol;
+        if (gameBoard[6] === symbol && gameBoard[7] === symbol && gameBoard[8] === symbol) return symbol;
+    
+        // Check columns
+        if (gameBoard[0] === symbol && gameBoard[3] === symbol && gameBoard[6] === symbol) return symbol;
+        if (gameBoard[1] === symbol && gameBoard[4] === symbol && gameBoard[7] === symbol) return symbol;
+        if (gameBoard[2] === symbol && gameBoard[5] === symbol && gameBoard[8] === symbol) return symbol;
+    
+        // Check diagonals
+        if (gameBoard[0] === symbol && gameBoard[4] === symbol && gameBoard[8] === symbol) return symbol;
+        if (gameBoard[2] === symbol && gameBoard[4] === symbol && gameBoard[6] === symbol) return symbol;
+    
+        return null;
+    }
+    
 
     grids.forEach((grid) => {
         grid.addEventListener('click', playRound);
     });
-
 
     return {createPlayer, playRound}
 
