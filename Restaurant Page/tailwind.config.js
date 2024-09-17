@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        fascinate: ['Fascinate Inline', 'system-ui']
       }
     },
   },
