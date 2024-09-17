@@ -1,0 +1,122 @@
+1. Create work directory
+2. initialize nmp
+	npm init -y
+3. Install webpack
+	npm install -D webpack webpack-cli
+4. Create src directory
+5. Create src files -- template.html input.css index.js --
+6. Create webpack file
+
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
+  },
+};
+
+7. Handling HTML --- Install htmlWebpackPlugin
+	npm install -D html-webpack-plugin
+
+8. Update webpack.config.js
+
+// webpack.config.js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/template.html",
+    }),
+  ],
+};
+
+9. Install Style loader
+	npm install --save-dev style-loader css-loader
+
+10. Update webpack file
+
+// webpack.config.js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/template.html",
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};
+
+
+11. Install Tailwind
+  npm install tailwindcss postcss-loader autoprefixer
+
+12. initialize Tailwind
+  npx tailwindcss init
+
+13. Set up postcss.config.js
+
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
+};
+
+14. Import Tailwind’s base, components, and utilities:
+
+15. Update webpack
+
+module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+    ],
+  },
+
+16. Enable Purging
+// tailwind.config.js
+module.exports = {
+  purge: ['./src/**/*.html', './src/**/*.js'],
+  darkMode: false, // or 'media' or 'class',
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+17. Import css in index.js
