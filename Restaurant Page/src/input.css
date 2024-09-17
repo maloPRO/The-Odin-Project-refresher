@@ -5,12 +5,15 @@
 
 @layer components {
     body {
-        @apply relative bg-[url('../images/yellow-bg.jpg')] bg-cover bg-center h-screen bg-no-repeat p-2;
+        @apply relative bg-[url('../images/yellow-bg.jpg')] bg-cover bg-center h-screen bg-no-repeat;
     }
     .main {
-        @apply absolute inset-0 bg-black bg-opacity-20;
+        @apply absolute inset-0 bg-black bg-opacity-20 p-3;
     }
     .logo {
-        @apply text-white  text-2xl font-bold font-poppins;
+        @apply flex items-center gap-2 text-white  text-2xl font-bold font-poppins;
+    }
+    .logoImg {
+        @apply w-16 aspect-square rounded-full bg-[url('../images/logo.jpg')] bg-center bg-cover border-2 border-red-600;
     }
 }
