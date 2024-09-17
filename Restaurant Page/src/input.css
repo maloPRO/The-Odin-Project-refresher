@@ -1,0 +1,13 @@
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    body {
+        @apply bg-cyan-900 p-3;
+    }
+    .resName {
+        @apply text-white  text-3xl font-bold;
+    }
+}
