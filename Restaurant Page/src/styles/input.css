@@ -19,6 +19,9 @@
     .menu-items {
         @apply hidden md:flex gap-8 basis-2/3 lg:basis-3/4 items-center justify-end text-white text-xl font-semibold;
     }
+    .menu-item {
+        @apply border-b-4 border-transparent hover:border-white transition-all duration-200 hover:cursor-pointer;
+    }
     .hamburger {
         @apply block w-6 h-0.5 bg-white transition-transform duration-300;
     }
