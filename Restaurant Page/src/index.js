@@ -1,3 +1,6 @@
 import './styles/input.css';
+import { homeBody } from './scripts/home';
 
-console.log(1234)
+const main = document.querySelector('.main');
+
+main.appendChild(homeBody)
