@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        fascinate: ['Fascinate Inline', 'system-ui']
+        roboto: ['Roboto', 'sans-serif'],
+        dancingScript: ["Dancing Script", 'cursive'],
       }
     },
   },
