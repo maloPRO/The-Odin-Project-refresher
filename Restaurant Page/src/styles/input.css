@@ -8,14 +8,14 @@
         @apply flex font-roboto;
     }
     nav {
-        @apply flex flex-col gap-12 h-screen w-1/4 pt-8 text-center;
+        @apply flex flex-col gap-6 h-screen w-1/4 px-6  pt-10 text-center;
     }
 
     .details {
         @apply basis-1/12;
     }
     .hotelName {
-        @apply font-dancingScript text-4xl lg:text-6xl text-amber-600;
+        @apply font-dancingScript text-xl lg:text-6xl text-amber-600;
     }
     .hotelType {
         @apply text-slate-800 text-lg italic font-thin;
@@ -24,9 +24,14 @@
         @apply basis-2/12 text-slate-900 text-sm lg:text-lg font-thin italic;
     }
     .menu-items {
-        @apply basis-2/3 flex flex-col gap-6 text-amber-600 text-lg;
+        @apply basis-2/3 flex flex-col lg:gap-2 text-amber-600 text-lg;
     }
-
+    .menu-item {
+        @apply hover:bg-amber-600 hover:cursor-pointer hover:bg-opacity-10 p-2;
+    }
+    .reservation {
+        @apply bg-amber-700 text-white p-2 m-2 hover:cursor-pointer hover:bg-amber-600;
+    }
     .dev {
         @apply basis-1/12;
     }
