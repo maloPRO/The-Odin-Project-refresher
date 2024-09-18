@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
   mode: "development",
@@ -14,7 +15,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
+  devServer: {
+    hot: true,
+    // other devServer options
+  },
   module: {
     rules: [
       {
