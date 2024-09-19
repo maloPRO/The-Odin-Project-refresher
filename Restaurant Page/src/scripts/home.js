@@ -28,3 +28,4 @@ const img3 = document.createElement('img');
 img3.src = image3;
 img3.classList.add('hmeImg', 'hmeImg3');
 homeRight.appendChild(img3);
+
