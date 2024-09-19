@@ -19,13 +19,16 @@ module.exports = {
   ],
   devServer: {
     hot: true,
-    // other devServer options
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: 'asset/resource', 
       },
     ],
   },

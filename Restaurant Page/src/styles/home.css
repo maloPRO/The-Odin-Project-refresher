@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .homeBody {
+        @apply h-96 h-screen grid grid-cols-2 w-3/4;
+    }
+    .hmeImg1, .hmeImg2  {
+        @apply w-full h-1/2;
+    }
+    .hmeImg3 {
+        @apply h-full w-full;
+    }
+}

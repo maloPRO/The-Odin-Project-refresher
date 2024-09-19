@@ -36,7 +36,9 @@
         @apply basis-1/12;
     }
     .homeBody {
-        @apply w-full h-96 bg-blue-500 h-screen bg-[url('../assets/yellow-bg.jpg')] bg-no-repeat bg-cover bg-center;
+        @apply h-96 h-screen grid grid-cols-2 w-3/4;
     }
-
+    .hmeImg {
+        
+    }
 }
