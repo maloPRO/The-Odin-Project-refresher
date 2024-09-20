@@ -4,37 +4,25 @@
 
 @layer components {
     .main {
-        @apply font-roboto;
+        @apply font-roboto h-screen flex flex-col;
     }
     nav {
-        @apply flex w-screen justify-between items-center;
+        @apply flex w-screen justify-between items-center bg-slate-300 md:basis-1/6 lg:basis-1/12 p-2;
     }
-    .details {
-        @apply hidden md:flex items-center gap-4 p-2;
+    .name {
+        @apply hidden md:flex items-center font-dancingScript text-xl md:text-3xl lg:text-6xl text-amber-600;
     }
-    .details .name {
-        @apply font-dancingScript text-xl md:text-3xl lg:text-6xl text-amber-600;
-    }
-    .details .type {
-        @apply text-slate-800 text-lg italic font-thin;
-    }
-    .details-mobile {
-        @apply md:hidden p-2 flex gap-2 items-center justify-center w-screen;
-    }
-    .details-mobile .name {
-        @apply font-dancingScript text-amber-600 text-2xl;
-    }
-    .details-mobile .type {
-        @apply text-slate-800 font-thin ;
+    .name-mobile {
+        @apply md:hidden p-2 flex items-center justify-center w-screen font-dancingScript text-amber-600 text-2xl;
     }
     .menu-items {
-        @apply hidden md:flex justify-items-end;
+        @apply hidden md:flex justify-items-end ;
     }
     .menu-item {
-        @apply flex items-center p-2 hover:bg-amber-600;
+        @apply flex items-center p-2 font-semibold hover:bg-amber-500 hover:text-white hover:cursor-pointer font-roboto text-amber-600;
     }
     .reservation {
-        @apply bg-amber-700 text-white p-2 hover:cursor-pointer hover:bg-amber-600;
+        @apply bg-amber-700 text-white p-2 m-2 rounded hover:cursor-pointer hover:bg-amber-500;
     }
     #menu-button {
         @apply absolute md:hidden focus:outline-none top-4 right-4 z-20;

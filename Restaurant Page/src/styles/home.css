@@ -4,12 +4,18 @@
 
 @layer components {
     .homeBody {
-        
+        @apply relative w-screen h-full grid md:grid-cols-2;
     }
-    .hmeImg1, .hmeImg2  {
-        @apply md:w-full h-1/3 md:h-1/2;
+    .homeLeft {
+        @apply w-full grid;
     }
-    .hmeImg3 {
-        @apply hidden  md:block w-full md:h-full opacity-70;
+    .leftTop {
+        @apply bg-[url("../assets/img1.jpg")] bg-center bg-cover ;
+    }
+    .leftBtm {
+        @apply bg-[url("../assets/img2.jpg")] bg-center bg-cover bg-no-repeat;
+    }
+    .homeRight {
+        @apply bg-[url("../assets/img3.jpg")] bg-center bg-cover bg-no-repeat;
     }
 }
