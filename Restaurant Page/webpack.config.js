@@ -15,11 +15,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
-    new webpack.HotModuleReplacementPlugin(),
   ],
-  devServer: {
-    hot: true,
-  },
   module: {
     rules: [
       {
