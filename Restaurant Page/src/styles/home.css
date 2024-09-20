@@ -4,18 +4,6 @@
 
 @layer components {
     .homeBody {
-        @apply relative w-screen h-full grid md:grid-cols-2;
-    }
-    .homeLeft {
-        @apply w-full grid;
-    }
-    .leftTop {
-        @apply bg-[url("../assets/img1.jpg")] bg-center bg-cover ;
-    }
-    .leftBtm {
-        @apply bg-[url("../assets/img2.jpg")] bg-center bg-cover bg-no-repeat;
-    }
-    .homeRight {
-        @apply bg-[url("../assets/img3.jpg")] bg-center bg-cover bg-no-repeat;
+        @apply relative w-screen h-full bg-[url("../assets/bg-1.jpg")] bg-cover bg-no-repeat;
     }
 }
