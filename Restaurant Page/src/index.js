@@ -15,5 +15,4 @@ main.appendChild(home.homeBody)
 
 menuButton.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden');
-  home.homeBody.classList.toggle('hidden');
 });
