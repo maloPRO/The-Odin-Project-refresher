@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .locations-page {
+        @apply w-screen h-full bg-[url("../assets/location-bg.jpg")] bg-cover;
+    }
+}

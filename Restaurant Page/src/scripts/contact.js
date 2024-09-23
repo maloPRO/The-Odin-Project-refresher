@@ -1,3 +1,5 @@
+import '../styles/contacts.css'
+
 export const contacts = (function() {
     const contactTabs = document.querySelectorAll('.contacts');
     const contactPage = document.createElement('div');
@@ -5,7 +7,6 @@ export const contacts = (function() {
     const mobileMenu = document.querySelector('.mobile-menu');
 
     contactPage.classList.add('contact-page');
-    contactPage.textContent = 'CONTACTS';
 
     contactTabs.forEach((tab) => {
         tab.addEventListener('click', () => {

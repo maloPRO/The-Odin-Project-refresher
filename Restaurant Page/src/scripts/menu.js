@@ -1,9 +1,11 @@
+import '../styles/menu.css'
+
 export const menu = (function () {
     const menuPage = document.createElement('div');
     const menuTabs = document.querySelectorAll('.menu');
     const main = document.querySelector('.main');
     menuPage.classList.add('menu-page');
-    menuPage.textContent = 'MENUS';
+    
     const mobileMenu = document.querySelector('.mobile-menu');
 
     menuTabs.forEach((tab) => {

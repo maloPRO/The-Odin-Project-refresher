@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .contact-page {
+        @apply w-screen h-full bg-[url("../assets/contacts-bg.jpg")] bg-cover;
+    }
+}

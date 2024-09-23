@@ -1,3 +1,5 @@
+import '../styles/about.css'
+
 export const about = (function () {
     const aboutTabs = document.querySelectorAll('.about');
     const aboutPage = document.createElement('div');
@@ -5,7 +7,6 @@ export const about = (function () {
     const mobileMenu = document.querySelector('.mobile-menu');
 
     aboutPage.classList.add('about-page');
-    aboutPage.textContent = 'ABOUT';
 
     aboutTabs.forEach((tab) => {
         tab.addEventListener('click', () => {

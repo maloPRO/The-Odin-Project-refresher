@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .about-page {
+        @apply w-screen h-full bg-[url("../assets/about-bg.jpg")] bg-cover;
+    }
+}

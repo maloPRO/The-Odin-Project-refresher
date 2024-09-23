@@ -1,3 +1,5 @@
+import '../styles/locations.css'
+
 export const locations = (function () {
     const locTabs = document.querySelectorAll('.location');
     const locPage = document.createElement('div');
@@ -5,7 +7,6 @@ export const locations = (function () {
     const mobileMenu = document.querySelector('.mobile-menu');
 
     locPage.classList.add('locations-page');
-    locPage.textContent = 'LOCATIONS';
 
     locTabs.forEach((tab) => {
         tab.addEventListener('click', () => {
