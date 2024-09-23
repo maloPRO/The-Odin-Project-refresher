@@ -1,10 +1,10 @@
 import './styles/input.css';
 import { homeBody } from './scripts/home';
+import { locations } from './scripts/locations';
 
 const main = document.querySelector('.main');
 const menuButton = document.getElementById('menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
-const dev = document.querySelector('.dev');
 
 
 main.appendChild(homeBody)
