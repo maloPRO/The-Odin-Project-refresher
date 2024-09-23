@@ -1,5 +1,5 @@
 import './styles/input.css';
-import { homeBody } from './scripts/home';
+import { home } from './scripts/home';
 import { locations } from './scripts/locations';
 
 const main = document.querySelector('.main');
@@ -7,10 +7,10 @@ const menuButton = document.getElementById('menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 
-main.appendChild(homeBody)
+main.appendChild(home.homeBody)
 
 
 menuButton.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden');
-  homeBody.classList.toggle('hidden');
+  home.homeBody.classList.toggle('hidden');
 });
