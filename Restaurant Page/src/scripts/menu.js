@@ -4,6 +4,7 @@ export const menu = (function () {
     const main = document.querySelector('.main');
     menuPage.classList.add('menu-page');
     menuPage.textContent = 'MENUS';
+    const mobileMenu = document.querySelector('.mobile-menu');
 
     menuTabs.forEach((tab) => {
         tab.addEventListener('click', () => {
@@ -11,6 +12,7 @@ export const menu = (function () {
             while (children.length > 1) {
                 main.removeChild(children[1])
             }
+            mobileMenu.classList.toggle('hidden')
             main.appendChild(menuPage)
         })
     })

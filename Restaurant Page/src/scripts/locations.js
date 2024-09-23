@@ -2,6 +2,7 @@ export const locations = (function () {
     const locTabs = document.querySelectorAll('.location');
     const locPage = document.createElement('div');
     const main = document.querySelector('.main');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
     locPage.classList.add('locations-page');
     locPage.textContent = 'LOCATIONS';
@@ -12,7 +13,8 @@ export const locations = (function () {
             while (children.length > 1) {
                 main.removeChild(children[1])
             }
-            main.appendChild(locPage)
+            mobileMenu.classList.toggle('hidden')
+            main.appendChild(locPage);
         })
     })
 
