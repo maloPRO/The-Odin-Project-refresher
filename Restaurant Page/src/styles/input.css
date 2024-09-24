@@ -16,7 +16,7 @@
         @apply md:hidden p-2 flex items-center justify-center w-screen font-dancingScript text-amber-600 text-4xl font-bold;
     }
     .menu-items {
-        @apply hidden md:flex justify-items-end items-center;
+        @apply hidden lg:flex justify-items-end items-center;
     }
     .menu-item {
         @apply flex items-center p-2 rounded font-semibold hover:bg-amber-500 hover:text-white hover:cursor-pointer font-roboto text-amber-600;
@@ -25,10 +25,10 @@
         @apply bg-amber-700 text-white p-2 m-2 rounded hover:cursor-pointer hover:bg-amber-500;
     }
     #menu-button {
-        @apply absolute md:hidden focus:outline-none top-4 right-4 z-20;
+        @apply absolute lg:hidden focus:outline-none top-4 right-4 z-20;
     }
 
     .mobile-menu {
-        @apply md:hidden bg-white w-full h-4/5 absolute top-0 left-0 z-10 flex flex-col justify-center items-center;
+        @apply lg:hidden bg-white w-full h-full absolute top-0 left-0 z-10 flex flex-col justify-center items-center;
     }
 }

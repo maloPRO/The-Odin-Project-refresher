@@ -18,6 +18,24 @@ export const locations = (function () {
             main.appendChild(locPage);
         })
     })
+    
+    const locHead = document.createElement('div');
+    ;locHead.classList.add('loc-head')
+    locHead.innerHTML = `
+        <h4>LOCATION & HOURS<h4>
+    `
+    locPage.appendChild(locHead)
 
+    const locContent = document.createElement('div');
+    locContent.classList.add('loc-content');
+    locContent.innerHTML = `
+        <p class='adress'>14 Rue Cene </p>
+        <p class='adress'>Karera 11, Gitega</p>
+        <p class='adress'>Burundi</p>
+        <p>OPEN EVERY DAY OF THE WEEK</P>
+        <P>7AM - 8PM</P>
+        <P>*(Hours may vary based on Musongati FC home games / other events)*</P>
+    `
+    locPage.appendChild(locContent)
 
 })();

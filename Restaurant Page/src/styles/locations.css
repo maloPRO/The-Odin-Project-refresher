@@ -4,6 +4,15 @@
 
 @layer components {
     .locations-page {
-        @apply w-screen h-full bg-[url("../assets/location-bg.jpg")] bg-cover;
+        @apply w-screen p-10 h-screen ;
+    }
+    .loc-head {
+        @apply  bg-[url("../assets/location-bg.jpg")] bg-cover w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl;
+    }
+    .loc-content {
+        @apply p-6 w-full h-1/2 border-2 border-amber-500 flex flex-col items-center;
+    }
+    .adress {
+        @apply text-slate-700;
     }
 }
