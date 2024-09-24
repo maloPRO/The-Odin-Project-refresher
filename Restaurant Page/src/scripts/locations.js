@@ -29,12 +29,16 @@ export const locations = (function () {
     const locContent = document.createElement('div');
     locContent.classList.add('loc-content');
     locContent.innerHTML = `
-        <p class='adress'>14 Rue Cene </p>
-        <p class='adress'>Karera 11, Gitega</p>
-        <p class='adress'>Burundi</p>
-        <p>OPEN EVERY DAY OF THE WEEK</P>
-        <P>7AM - 8PM</P>
-        <P>*(Hours may vary based on Musongati FC home games / other events)*</P>
+        <div class='adress'>
+            <p>14 Rue Cene </p>
+            <p>Karera 11, Gitega</p>
+            <p>Burundi</p>
+        </div>
+        <div class='time'>
+            <p>OPEN EVERY DAY OF THE WEEK!</P>
+            <P>7AM - 8PM</P>
+        </div>
+        <div class='aob'>*(Hours may vary based on Musongati FC home games / other events)*</div>
     `
     locPage.appendChild(locContent)
 

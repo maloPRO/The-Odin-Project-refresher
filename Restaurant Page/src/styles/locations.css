@@ -10,9 +10,15 @@
         @apply  bg-[url("../assets/location-bg.jpg")] bg-cover w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl;
     }
     .loc-content {
-        @apply p-6 w-full h-1/2 border-2 border-amber-500 flex flex-col items-center;
+        @apply p-6 w-full h-1/2 flex flex-col items-center bg-amber-600;
     }
     .adress {
-        @apply text-slate-700;
+        @apply text-white flex flex-col items-center p-2 font-roboto;
+    }
+    .time {
+        @apply text-white text-lg md:text-2xl font-bold flex flex-col items-center p-2 font-roboto;
+    }
+    .aob {
+        @apply text-white italic;
     }
 }
