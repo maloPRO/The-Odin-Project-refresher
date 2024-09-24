@@ -7,7 +7,7 @@
         @apply w-screen p-10 h-screen ;
     }
     .loc-head {
-        @apply  bg-[url("../assets/location-bg.jpg")] bg-cover w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl;
+        @apply bg-[url("../assets/location-bg.jpg")] bg-cover w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl;
     }
     .loc-content {
         @apply p-6 w-full h-1/2 flex flex-col bg-amber-600;
@@ -16,7 +16,7 @@
         @apply basis-1/6 flex gap-3 w-full h-4 justify-center;
     }
     .stars div {
-        @apply bg-blue-200 w-4 h-4 rotate-45; 
+        @apply bg-slate-300 w-4 h-4 rotate-45; 
     }
     .adress {
         @apply basis-2/6 text-white flex flex-col items-center p-2 font-roboto;

@@ -1,10 +1,16 @@
-import '../styles/locations.css'
+import '../styles/locations.css';
+import image1 from '../assets/about-bg.jpg';
+import image2 from '../assets/bg-1.jpg';
+import image3 from '../assets/contacts-bg.jpg';
+import image4 from '../assets/location-bg.jpg';
+
 
 export const locations = (function () {
     const locTabs = document.querySelectorAll('.location');
     const locPage = document.createElement('div');
     const main = document.querySelector('.main');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const images = [image1, image2, image3, image4];
 
     locPage.classList.add('locations-page');
 
@@ -45,6 +51,13 @@ export const locations = (function () {
         </div>
         <div class='aob'>*(Hours may vary based on Musongati FC home games / other events)*</div>
     `
+    let idx = 0;
+
+    setInterval (() => {
+        locHead.style.backgroundImage = `url(${images[idx]})`;
+        idx = (idx + 1) % images.length;
+    }, 7000)
+
     locPage.appendChild(locContent)
 
 })();

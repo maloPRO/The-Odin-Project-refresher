@@ -10,10 +10,10 @@
         @apply flex w-screen justify-between items-center bg-slate-200 md:basis-1/12 lg:basis-1/12 p-2 md:pl-7 border-b-4 border-amber-500;
     }
     .name {
-        @apply hidden md:flex items-center font-dancingScript text-xl md:text-4xl lg:text-5xl text-amber-600;
+        @apply hidden md:flex items-center font-dancingScript text-xl md:text-4xl lg:text-5xl text-amber-600 hover:cursor-pointer;
     }
     .name-mobile {
-        @apply md:hidden p-2 flex items-center justify-center w-screen font-dancingScript text-amber-600 text-4xl font-bold;
+        @apply md:hidden p-2 flex items-center justify-center w-screen font-dancingScript text-amber-600 text-4xl font-bold hover:cursor-pointer;
     }
     .menu-items {
         @apply hidden lg:flex justify-items-end items-center;
