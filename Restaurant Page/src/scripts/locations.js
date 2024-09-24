@@ -46,8 +46,8 @@ export const locations = (function () {
             <p>Burundi</p>
         </div>
         <div class='time'>
-            <p>OPEN EVERY DAY OF THE WEEK!</P>
-            <P>7AM - 8PM</P>
+            <p>OPEN MONDAY TO SATURDAY</P>
+            <P>0900h - 1900h</P>
         </div>
         <div class='aob'>*(Hours may vary based on Musongati FC home games / other events)*</div>
     `
