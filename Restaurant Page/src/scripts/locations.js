@@ -29,6 +29,11 @@ export const locations = (function () {
     const locContent = document.createElement('div');
     locContent.classList.add('loc-content');
     locContent.innerHTML = `
+        <div class='stars'>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class='adress'>
             <p>14 Rue Cene </p>
             <p>Karera 11, Gitega</p>
