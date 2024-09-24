@@ -52,11 +52,11 @@ export const locations = (function () {
         <div class='aob'>*(Hours may vary based on Musongati FC home games / other events)*</div>
     `
     let idx = 0;
-
+    locHead.style.backgroundImage = `url(${images[idx]})`
     setInterval (() => {
         locHead.style.backgroundImage = `url(${images[idx]})`;
         idx = (idx + 1) % images.length;
-    }, 7000)
+    }, 5000)
 
     locPage.appendChild(locContent)
 

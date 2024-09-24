@@ -7,7 +7,7 @@
         @apply w-screen p-10 h-screen ;
     }
     .loc-head {
-        @apply bg-[url("../assets/location-bg.jpg")] bg-cover w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl;
+        @apply bg-cover w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl;
     }
     .loc-content {
         @apply p-6 w-full h-1/2 flex flex-col bg-amber-600;
