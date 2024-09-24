@@ -14,6 +14,15 @@ module.exports = {
         'lg': '3px 3px 6px rgba(0, 0, 0, 0.5)',
         'xl': '4px 4px 8px rgba(0, 0, 0, 0.5)',
       },
+      keyframes: {
+        bounceTwice: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-25%)' },
+        },
+      },
+      animation: {
+        bounceTwice: 'bounceTwice 1s ease-in-out 2 forwards', // 2 iterations, and forwards keeps the final state
+      },
     },
   },
   variants: {
