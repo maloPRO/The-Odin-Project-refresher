@@ -4,6 +4,9 @@
 
 @layer components {
     .menu-page {
-        @apply w-screen h-full bg-[url("../assets/menu-bg.jpg")] bg-cover;
+        @apply w-screen min-h-screen p-10;
+    }
+    .menu-head {
+        @apply bg-cover bg-center w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl shadow-black shadow-2xl ease-out duration-700;
     }
 }

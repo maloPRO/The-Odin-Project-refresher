@@ -26,7 +26,7 @@ export const locations = (function () {
     })
     
     const locHead = document.createElement('div');
-    ;locHead.classList.add('loc-head')
+    locHead.classList.add('loc-head')
     locHead.innerHTML = `
         <h4>LOCATION & HOURS<h4>
     `
