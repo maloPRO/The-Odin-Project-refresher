@@ -37,8 +37,8 @@ export const menu = (function () {
     
     menuContent.innerHTML = `
         <div class='menuType'>
-            <button class='foodMenu'>FOOD MENU</button>
-            <button class='drinkMenu'>DRINK MENU</button>
+            <button>FOOD MENU</button>
+            <button>DRINK MENU</button>
         </div>
     `
 
