@@ -1,0 +1,140 @@
+{
+    "restaurantName": "Fo Shizzle Munchies",
+    "menu": {
+      "food": [
+        {
+          "id": 1,
+          "name": "Garlic Bread",
+          "description": "Toasted bread with garlic butter and herbs",
+          "price": 5.99,
+          "vegetarian": true
+        },
+        {
+          "id": 2,
+          "name": "Bruschetta",
+          "description": "Grilled bread topped with tomato, basil, and olive oil",
+          "price": 6.99,
+          "vegetarian": true
+        },
+        {
+          "id": 3,
+          "name": "Caesar Salad",
+          "description": "Crisp romaine lettuce with Caesar dressing and croutons",
+          "price": 7.99,
+          "vegetarian": true
+        },
+        {
+          "id": 4,
+          "name": "Chicken Wings",
+          "description": "Spicy chicken wings served with blue cheese dressing",
+          "price": 9.99,
+          "vegetarian": false
+        },
+        {
+          "id": 5,
+          "name": "Grilled Salmon",
+          "description": "Fresh salmon grilled to perfection, served with lemon butter",
+          "price": 14.99,
+          "vegetarian": false
+        },
+        {
+          "id": 6,
+          "name": "Margherita Pizza",
+          "description": "Classic pizza with tomato, fresh mozzarella, and basil",
+          "price": 11.99,
+          "vegetarian": true
+        },
+        {
+          "id": 7,
+          "name": "Spaghetti Bolognese",
+          "description": "Spaghetti with a rich, meaty Bolognese sauce",
+          "price": 12.99,
+          "vegetarian": false
+        },
+        {
+          "id": 8,
+          "name": "Vegetable Stir Fry",
+          "description": "Mixed vegetables stir-fried in a soy sauce glaze",
+          "price": 10.99,
+          "vegetarian": true
+        },
+        {
+          "id": 9,
+          "name": "Beef Tacos",
+          "description": "Soft tortillas filled with seasoned beef, lettuce, and cheese",
+          "price": 9.99,
+          "vegetarian": false
+        },
+        {
+          "id": 10,
+          "name": "Mushroom Risotto",
+          "description": "Creamy risotto with sautéed mushrooms and parmesan cheese",
+          "price": 13.99,
+          "vegetarian": true
+        }
+      ],
+      "beverages": [
+        {
+          "id": 1,
+          "name": "Lemonade",
+          "description": "Freshly squeezed lemonade",
+          "price": 3.99
+        },
+        {
+          "id": 2,
+          "name": "Iced Coffee",
+          "description": "Cold brewed coffee served over ice",
+          "price": 4.99
+        },
+        {
+          "id": 3,
+          "name": "Green Tea",
+          "description": "Hot or iced green tea with a hint of honey",
+          "price": 2.99
+        },
+        {
+          "id": 4,
+          "name": "Coca-Cola",
+          "description": "Classic Coca-Cola soft drink",
+          "price": 1.99
+        },
+        {
+          "id": 5,
+          "name": "Orange Juice",
+          "description": "Freshly squeezed orange juice",
+          "price": 3.99
+        },
+        {
+          "id": 6,
+          "name": "Mango Smoothie",
+          "description": "Blended mango smoothie with yogurt and honey",
+          "price": 5.99
+        },
+        {
+          "id": 7,
+          "name": "Sparkling Water",
+          "description": "Chilled sparkling water",
+          "price": 2.49
+        },
+        {
+          "id": 8,
+          "name": "Hot Chocolate",
+          "description": "Rich hot chocolate with whipped cream",
+          "price": 3.49
+        },
+        {
+          "id": 9,
+          "name": "Espresso",
+          "description": "A shot of strong espresso",
+          "price": 2.99
+        },
+        {
+          "id": 10,
+          "name": "Chai Latte",
+          "description": "Spiced tea with steamed milk",
+          "price": 4.49
+        }
+      ]
+    }
+  }
+  
