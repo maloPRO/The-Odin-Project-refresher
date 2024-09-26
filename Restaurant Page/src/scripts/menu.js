@@ -49,7 +49,7 @@ export const menu = (function () {
     foodMenu.classList.add('foodMenu');
     menuContent.appendChild(foodMenu)
     foodMenu.innerHTML = `
-        <div class='menuTitle'>FOOD</div>
+        <div class='menuTitle'>FOODS</div>
     `
 
     foods.forEach((food) => {
