@@ -13,7 +13,7 @@
         @apply text-shadow-xl;
     }
     .loc-content {
-        @apply p-4 w-full h-1/2 flex flex-col bg-amber-600 shadow-black shadow-2xl;
+        @apply p-4 w-full h-1/2 flex flex-col bg-amber-800 shadow-black shadow-2xl;
     }
     .stars {
         @apply basis-1/6 flex gap-3 w-full h-4 justify-center;

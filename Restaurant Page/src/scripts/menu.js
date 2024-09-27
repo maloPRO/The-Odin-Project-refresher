@@ -88,10 +88,14 @@ export const menu = (function () {
         `
         drinkMenu.appendChild(drinkCard)
     });
+    
 
     const foodBtn = menuContent.children[0].children[0];
     const drinkBtn = menuContent.children[0].children[1];
 
+    menuContent.appendChild(foodMenu);
+    foodBtn.style.backgroundColor = '#fbbf24';
+    foodBtn.style.color = '#FFF';
 
     foodBtn.addEventListener('click', () => {
         if (menuContent.children.length > 1) {
