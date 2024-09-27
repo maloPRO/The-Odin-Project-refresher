@@ -10,7 +10,7 @@
         @apply bg-cover bg-center w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl shadow-black shadow-2xl ease-out duration-700;
     }
     .menu-content {
-        @apply shadow-black shadow-2xl bg-amber-600 flex flex-col items-center;
+        @apply shadow-black shadow-2xl bg-amber-800 flex flex-col items-center;
 
     }
     .menuType {
@@ -19,8 +19,11 @@
     .menuType button {
         @apply bg-white text-amber-600 p-2 rounded hover:text-amber-800 font-bold ;
     }
-    .foodMenu, .drinkMenu {
-        @apply bg-amber-500 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full md:w-1/2 justify-center shadow-2xl text-white p-4;
+    .foodMenu {
+        @apply bg-amber-500 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full md:w-1/2 justify-center shadow-2xl text-white p-4 mb-2;
+    }
+    .drinkMenu {
+        @apply bg-amber-600 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full md:w-1/2 justify-center shadow-2xl text-white p-4 mb-2;
     }
     .foodCard, .drinkCard {
         @apply flex flex-col gap-1 border-b-2 p-2;
