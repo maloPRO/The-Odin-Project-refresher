@@ -1,7 +1,9 @@
-import '../styles/contacts.css';
+import "../styles/contacts.css";
 
 export const contacts = (() => {
-  const contactPage = createDiv('contact-page', `
+  const contactPage = createDiv(
+    "contact-page",
+    `
     <div class='contact-head'>CONTACT</div>
     <div class='content'>
       <div class='msg'>Send us a message and we will get back to you as soon as possible. Looking forward to hearing from you.</div>
@@ -13,20 +15,21 @@ export const contacts = (() => {
         <button type='submit'>SEND</button>
       </form>
     </div>
-  `);
-  const main = document.querySelector('.main');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  `,
+  );
+  const main = document.querySelector(".main");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-  document.querySelectorAll('.contacts').forEach(tab => 
-    tab.addEventListener('click', () => {
+  document.querySelectorAll(".contacts").forEach((tab) =>
+    tab.addEventListener("click", () => {
       clearChildren(main, 1);
-      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle("hidden");
       main.appendChild(contactPage);
-    })
+    }),
   );
 
-  function createDiv(className, innerHTML = '') {
-    const div = document.createElement('div');
+  function createDiv(className, innerHTML = "") {
+    const div = document.createElement("div");
     div.classList.add(className);
     div.innerHTML = innerHTML;
     return div;

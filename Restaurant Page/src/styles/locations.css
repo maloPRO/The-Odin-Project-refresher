@@ -3,32 +3,31 @@
 @tailwind utilities;
 
 @layer components {
-    .locations-page {
-        @apply w-screen p-10 h-full;
-    }
-    .loc-head {
-        @apply bg-cover bg-center w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl shadow-black shadow-2xl ease-out duration-700;
-    }
-    .loc-head h4 {
-        @apply text-shadow-xl;
-    }
-    .loc-content {
-        @apply p-4 w-full h-1/2 flex flex-col bg-amber-800 shadow-black shadow-2xl;
-    }
-    .stars {
-        @apply basis-1/6 flex gap-3 w-full h-4 justify-center;
-    }
-    .stars div {
-        @apply bg-slate-300 w-4 h-4 rotate-45; 
-    }
-    .adress {
-        @apply basis-2/6 text-white flex flex-col items-center p-2 font-mono;
-    }
-    .time {
-        @apply basis-3/6 text-white text-lg 2xl:text-2xl font-bold flex flex-col items-center p-2 font-roboto;
-    }
-    .aob {
-        @apply basis-2/6 text-white italic flex justify-center text-center;
-    }
-
+  .locations-page {
+    @apply w-screen p-10 h-full;
+  }
+  .loc-head {
+    @apply bg-cover bg-center w-full h-1/2 flex items-center justify-center text-white font-archivo text-2xl md:text-6xl shadow-black shadow-2xl ease-out duration-700;
+  }
+  .loc-head h4 {
+    @apply text-shadow-xl;
+  }
+  .loc-content {
+    @apply p-4 w-full h-1/2 flex flex-col bg-amber-800 shadow-black shadow-2xl;
+  }
+  .stars {
+    @apply basis-1/6 flex gap-3 w-full h-4 justify-center;
+  }
+  .stars div {
+    @apply bg-slate-300 w-4 h-4 rotate-45;
+  }
+  .adress {
+    @apply basis-2/6 text-white flex flex-col items-center p-2 font-mono;
+  }
+  .time {
+    @apply basis-3/6 text-white text-lg 2xl:text-2xl font-bold flex flex-col items-center p-2 font-roboto;
+  }
+  .aob {
+    @apply basis-2/6 text-white italic flex justify-center text-center;
+  }
 }

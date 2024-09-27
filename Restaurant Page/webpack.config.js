@@ -1,7 +1,7 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -20,11 +20,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
-        type: 'asset/resource', 
+        type: "asset/resource",
       },
     ],
   },
