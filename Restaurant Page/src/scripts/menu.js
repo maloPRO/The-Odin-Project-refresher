@@ -1,129 +1,93 @@
 import '../styles/menu.css';
-import image4 from '../assets/about-bg.jpg';
-import image3 from '../assets/bg-1.jpg';
-import image2 from '../assets/contacts-bg.jpg';
 import image1 from '../assets/location-bg.jpg';
-import myMenu from '../assets/menu.json'
+import image2 from '../assets/contacts-bg.jpg';
+import image3 from '../assets/bg-1.jpg';
+import image4 from '../assets/about-bg.jpg';
+import myMenu from '../assets/menu.json';
 
-export const menu = (function () {
-    const menuPage = document.createElement('div');
-    menuPage.classList.add('menu-page');
+export const menu = (() => {
+  const menuPage = createDiv('menu-page');
+  const images = [image1, image2, image3, image4];
+  const main = document.querySelector('.main');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const menuTabs = document.querySelectorAll('.menu');
+  const foods = myMenu.menu.food;
+  const drinks = myMenu.menu.beverages;
 
-    const menuTabs = document.querySelectorAll('.menu');
-    const main = document.querySelector('.main');
-    const images = [image1, image2, image3, image4];
-    const foods = myMenu.menu.food;
-    const drinks = myMenu.menu.beverages;
-    const mobileMenu = document.querySelector('.mobile-menu');
-
-    menuTabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-            const children = main.children;
-            while (children.length > 1) {
-                main.removeChild(children[1])
-            }
-            mobileMenu.classList.toggle('hidden')
-            main.appendChild(menuPage)
-        })
+  menuTabs.forEach(tab =>
+    tab.addEventListener('click', () => {
+      clearChildren(main, 1);
+      mobileMenu.classList.toggle('hidden');
+      main.appendChild(menuPage);
     })
+  );
 
-    const menuHead = document.createElement('div');
-    menuHead.classList.add('menu-head')
-    menuHead.innerHTML = `
-        <h4>MENUS<h4>
-    `
-    menuPage.appendChild(menuHead);
+  const menuHead = createDiv('menu-head', '<h4>MENUS</h4>');
+  menuPage.appendChild(menuHead);
 
-    let idx = 0;
-    menuHead.style.backgroundImage = `url(${images[idx]})`
-    setInterval (() => {
-        menuHead.style.backgroundImage = `url(${images[idx]})`;
-        idx = (idx + 1) % images.length;
-    }, 5000)
+  let idx = 0;
+  setInterval(() => {
+    menuHead.style.backgroundImage = `url(${images[idx]})`;
+    idx = (idx + 1) % images.length;
+  }, 5000);
 
-    const menuContent = document.createElement('div');
-    menuContent.classList.add('menu-content');
-    
-    menuContent.innerHTML = `
-        <div class='menuType'>
-            <button class='foodBtn'>FOOD MENU</button>
-            <button class='drinkBtn'>DRINK MENU</button>
-        </div>
-    `
-    menuPage.appendChild(menuContent);
-    
-    const foodMenu = document.createElement('div');
-    foodMenu.classList.add('foodMenu');
-    foodMenu.innerHTML = `
-        <div class='menuTitle'>FOODS</div>
-    `
+  const menuContent = createDiv('menu-content', `
+    <div class='menuType'>
+      <button class='foodBtn'>FOOD MENU</button>
+      <button class='drinkBtn'>DRINK MENU</button>
+    </div>
+  `);
+  menuPage.appendChild(menuContent);
 
-    const drinkMenu = document.createElement('div');
-    drinkMenu.classList.add('drinkMenu');
-    drinkMenu.innerHTML = `
-        <div class='menuTitle'>DRINKS</div>
-    `
+  const foodMenu = createMenuSection('foodMenu', 'FOODS', foods);
+  const drinkMenu = createMenuSection('drinkMenu', 'DRINKS', drinks);
 
+  const [foodBtn, drinkBtn] = menuContent.querySelectorAll('button');
 
-    // Populate food menu
-    foods.forEach((food) => {
-        const foodCard = document.createElement('div');
-        foodCard.classList.add('foodCard');
-        foodCard.innerHTML = `
-            <div class='itemName'>${food.name}</div>
-            <div class='itemDesc'>${food.description}</div>
-            <div class='itemPrice'>$ ${food.price}</div>
-        `
-        foodMenu.appendChild(foodCard)
+  menuContent.appendChild(foodMenu);
+  setActiveButton(foodBtn, drinkBtn);
+
+  foodBtn.addEventListener('click', () => {
+    switchMenu(menuContent, foodMenu, foodBtn, drinkBtn);
+  });
+
+  drinkBtn.addEventListener('click', () => {
+    switchMenu(menuContent, drinkMenu, drinkBtn, foodBtn);
+  });
+
+  function createDiv(className, innerHTML = '') {
+    const div = document.createElement('div');
+    div.classList.add(className);
+    div.innerHTML = innerHTML;
+    return div;
+  }
+
+  function clearChildren(parent, keep = 0) {
+    while (parent.children.length > keep) parent.removeChild(parent.lastChild);
+  }
+
+  function createMenuSection(className, title, items) {
+    const section = createDiv(className, `<div class='menuTitle'>${title}</div>`);
+    items.forEach(item => {
+      section.appendChild(createDiv(`${className.slice(0, -4)}Card`, `
+        <div class='itemName'>${item.name}</div>
+        <div class='itemDesc'>${item.description}</div>
+        <div class='itemPrice'>$ ${item.price}</div>
+      `));
     });
+    return section;
+  }
 
-    // Populate drink menu
-    drinks.forEach((drink) => {
-        const drinkCard = document.createElement('div');
-        drinkCard.classList.add('drinkCard');
-        drinkCard.innerHTML = `
-            <div class='itemName'>${drink.name}</div>
-            <div class='itemDesc'>${drink.description}</div>
-            <div class='itemPrice'>$ ${drink.price}</div>
-        `
-        drinkMenu.appendChild(drinkCard)
-    });
-    
+  function setActiveButton(active, inactive) {
+    active.style.backgroundColor = '#fbbf24';
+    active.style.color = '#FFF';
+    inactive.style.backgroundColor = '#FFF';
+    inactive.style.color = '#d97706';
+  }
 
-    const foodBtn = menuContent.children[0].children[0];
-    const drinkBtn = menuContent.children[0].children[1];
-
-    menuContent.appendChild(foodMenu);
-    foodBtn.style.backgroundColor = '#fbbf24';
-    foodBtn.style.color = '#FFF';
-
-    foodBtn.addEventListener('click', () => {
-        if (menuContent.children.length > 1) {
-            menuContent.removeChild(menuContent.lastChild);
-            menuContent.appendChild(foodMenu);
-        } else {
-            menuContent.appendChild(foodMenu);
-        }
-
-        foodBtn.style.backgroundColor = '#fbbf24';
-        foodBtn.style.color = '#FFF';
-        drinkBtn.style.backgroundColor = '#FFF';
-        drinkBtn.style.color = '#d97706';
-    })
-
-    drinkBtn.addEventListener('click', () => {
-        if (menuContent.children.length > 1) {
-            menuContent.removeChild(menuContent.lastChild);
-            menuContent.appendChild(drinkMenu);
-        } else {
-            menuContent.appendChild(drinkMenu);
-        }
-
-        drinkBtn.style.backgroundColor = '#d97706';
-        drinkBtn.style.color = '#FFF';
-        foodBtn.style.backgroundColor = '#FFF';
-        foodBtn.style.color = '#fbbf24'
-    })
-
-
+  function switchMenu(content, newMenu, activeBtn, inactiveBtn) {
+    clearChildren(content, 1);
+    content.appendChild(newMenu);
+    setActiveButton(activeBtn, inactiveBtn);
+  }
 })();

@@ -1,31 +1,25 @@
-import '../styles/home.css'
+import '../styles/home.css';
+import { createDiv } from './utils';
 
-export const home = (function () {
-    const homeBody = document.createElement('div');
-    const homeTab = document.querySelectorAll('.home');
-    const main = document.querySelector('.main');
-    homeBody.classList.add('homeBody');
-    const mobileMenu = document.querySelector('.mobile-menu');
+export const home = (() => {
+  const homeBody = createDiv('homeBody');
+  const main = document.querySelector('.main');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-    homeTab.forEach((tab) => {
-        tab.addEventListener('click', () => {
-            const children = main.children
-            while (children.length > 1) {
-                main.removeChild(children[1])
-            }
-            mobileMenu.classList.toggle('hidden')
-            main.appendChild(homeBody);
-        })
-    })
+  document.querySelectorAll('.home').forEach(tab => {
+    tab.addEventListener('click', () => {
+      clearChildren(main, 1);
+      mobileMenu.classList.toggle('hidden');
+      main.appendChild(homeBody);
+    });
+  });
 
-    const slogan = document.createElement('div');
-    slogan.classList.add('slogan');
-    slogan.textContent = "Eat, Drink & Enjoy!"
-    homeBody.appendChild(slogan);
+  const slogan = createDiv('slogan', "Eat, Drink & Enjoy!");
+  homeBody.appendChild(slogan);
 
-    return { homeBody }
-})()
+  function clearChildren(parent, keep = 0) {
+    while (parent.children.length > keep) parent.removeChild(parent.lastChild);
+  }
 
-
-
-
+  return { homeBody };
+})();
